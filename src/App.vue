@@ -1,14 +1,9 @@
-
-
 <template>
   <Home />
 </template>
 <script setup>
+import Home from "./views/Home.vue";
 
-import Home from './views/Home.vue'
-components: {
-  
-}
 </script>
 
 <style>
