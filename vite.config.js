@@ -11,8 +11,6 @@ export default defineConfig({
       template: { transformAssetUrls }
     }),
 
-    quasar({
-      sassVariables: 'src/quasar-variables.sass'
-    })
+    quasar()
   ]
 })
