@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h1>Welcome to your dashboard {{ nickname }}</h1>
-  </div>
+<div>
+<h1>Choose your Character {{nickname}} </h1>
+
+</div>
+
 </template>
 
 <script>

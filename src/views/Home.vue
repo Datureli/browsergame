@@ -12,7 +12,7 @@
         />
       </label>
       <button type="submit">
-        <router-link class="activeStatus" v-if="isActive" to="/userinterface"
+        <router-link class="activeStatus" v-if="isActive" to="/character"
           >Continue</router-link
         >
         <span v-else>Continue</span>
