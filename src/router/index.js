@@ -18,6 +18,11 @@ const router = createRouter({
       path: "/character",
       component: () => import("../components/ChooseCharacter.vue"),
     },
+    {
+      name: "Sex",
+      path: "/sex",
+      component: () => import("../components/SexSelect.vue"),
+    },
   ],
 });
 export default router;
