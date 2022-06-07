@@ -4,8 +4,9 @@
 
     <div class="text-h3 justify-center q-pa-lg row q-gutter-md q-mx-auto">
       <router-link to="/sex">
-        <q-card class="my-card">
-          <q-card-section><p>Paladin</p> </q-card-section>
+        <q-card v-for="classess1 in classess1" :key="classess1" class="my-card">
+          
+          <q-card-section><p>{{classess1.name}}</p> </q-card-section>
         </q-card>
       </router-link>
 
@@ -29,18 +30,22 @@
 </template>
 
 <script>
+import  { ref } from 'vue'
 import { useNickname } from "../composables/useNickname";
 export default {
   setup() {
-    const classess = [
+    let classess1 = ref([
       {
-        className: "Paladin",
+        name: "Paladin",
       },
-    ];
+         {
+        name: "Paladin",
+      },
+    ])
     let { nickname } = useNickname();
     return {
       nickname,
-      classess,
+      classess1,
     };
   },
 };
@@ -58,5 +63,6 @@ export default {
   transition: 0.5s
   cursor: pointer
 a
+   color: black
    text-decoration: none 
 </style>
