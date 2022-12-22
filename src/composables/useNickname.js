@@ -1,4 +1,4 @@
-import { ref, computed,} from "vue";
+import { ref, computed } from "vue";
 let nickname = ref(null);
 let activeLink = ref(false);
 export function useNickname() {

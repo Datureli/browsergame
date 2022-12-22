@@ -5,9 +5,12 @@
     <div
       class="text-h3 justify-center q-pa-lg row inline q-gutter-md q-mx-auto"
     >
-      <q-card :to="'/sex'" v-for="classess1 in classess1" :key="classess1" class="my-card">
+      <q-card v-for="characterClass in characterClass" :key="characterClass.id" class="my-card">
+             <router-link class="activeStatus" to="/sex"
+          >Continue</router-link
+        >
         <q-card-section>
-          {{ classess1.name }}
+          {{ characterClass.name }}
         </q-card-section>
       </q-card>
     </div>
@@ -19,7 +22,7 @@ import { ref } from "vue";
 import { useNickname } from "../composables/useNickname";
 export default {
   setup() {
-    let classess1 = ref([
+    let characterClass = ref([
       {
         name: "Paladin",
       },
@@ -36,7 +39,7 @@ export default {
     let { nickname } = useNickname();
     return {
       nickname,
-      classess1,
+      characterClass,
     };
   },
 };
@@ -52,10 +55,12 @@ export default {
   height: 300px
   max-width: 250px
   border: 2px solid $primary
+
 .my-card:hover
   transform: scale(1.1)
   transition: 0.5s
   cursor: pointer
+
 a
    color: black
    text-decoration: none
