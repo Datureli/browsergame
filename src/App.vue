@@ -1,13 +1,10 @@
 <template>
-<div>
-  <Home />
-  <router-view />
-</div>
-
+  <div>
+    <Home />
+    <router-view />
+  </div>
 </template>
-<script setup>
-
-</script>
+<script setup></script>
 
 <style>
 #app {
