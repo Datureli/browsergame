@@ -4,26 +4,26 @@
 
     <div>
       <div
-        v-for="characterClass in characterClass"
-        :key="characterClass.name"
+       
         class="text-h3 justify-center q-pa-lg row inline q-gutter-md q-mx-auto"
       >
+      
         <q-card
-          height="300"
-          v-model="selectedClass"
-          :value="selectedClass.name"
-          @click="toggleClass"
-          :class="{ cardBorder: isToggled}"
-          class="my-card"
+         v-for="(characterClass,index) in characterClass"
+        :key="index"
+          height="350"
+          @click="toggleClass(index)"
+          class=" my-card"
+          :class="{ cardBorder: index === activeIndex }"
         >
-          {{ characterClass.name }}
-          <img height="300" :src="characterClass.image" alt="avatar" />
+          <p class="characterName" style="position: absolute">
+            {{ characterClass.name }}
+          </p>
+          <img height="350" :src="characterClass.image" alt="avatar" />
         </q-card>
       </div>
     </div>
-    {{ characterClass.image }}
-
-    <button class="continueButton" :disabled="disableButton">
+    <button class="continueButton" :disabled="!isToggled">
       <router-link class="activeStatus" to="/sex">Continue</router-link>
     </button>
     <input type="text" v-model="characterClass.name" />
@@ -34,22 +34,16 @@
 import { reactive, ref } from "vue";
 import { useNickname } from "../composables/useNickname";
 
-const selectedClass = reactive([]);
 let isToggled = ref(false);
 const isDisabled = ref(false);
+let activeIndex = ref(null);
 
-function toggleClass(event) {
-  event.target.classList.toggle('cardBorder')
+function toggleClass(index) {
+  //isToggled.value = !isToggled.value;
+ activeIndex.value = index
 }
-const disableButton = () => {
-  if (isToggled) {
-    isDisabled = true;
-  }
-};
-const selectedClassName = () => {
-  selectedClass.push(characterClass);
-};
-let characterClass = ref([
+
+let characterClass = reactive([
   {
     name: "Paladin",
     image: new URL("/src/assets/img/paladin.jpg", import.meta.url),
@@ -84,10 +78,16 @@ let { nickname } = useNickname();
   display: flex
 
 .cardBorder
-  border: 12px solid green
+  border: 5px solid green
 
-.cardBorder2
-  border: none
+.characterName
+  color: black
+  font-size: 26px
+  padding-right: 0.6rem
+  text-align: right
+  justify-content: right
+  display: flex
+  width: 100%
 
 .my-card
   width: 230px
