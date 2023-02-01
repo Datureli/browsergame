@@ -4,22 +4,20 @@
 
     <div>
       <div
-       
         class="text-h3 justify-center q-pa-lg row inline q-gutter-md q-mx-auto"
       >
-      
         <q-card
-         v-for="(characterClass,index) in characterClass"
-        :key="index"
+          v-for="(characterClass, index) in characterClass"
+          :key="index"
           height="350"
           @click="toggleClass(index)"
-          class=" my-card"
+          class="my-card"
           :class="{ cardBorder: index === activeIndex }"
         >
           <p class="characterName" style="position: absolute">
             {{ characterClass.name }}
           </p>
-          <img height="350" :src="characterClass.image" alt="avatar" />
+          <img height="298" :src="characterClass.image" alt="avatar" />
         </q-card>
       </div>
     </div>
@@ -39,8 +37,8 @@ const isDisabled = ref(false);
 let activeIndex = ref(null);
 
 function toggleClass(index) {
-  //isToggled.value = !isToggled.value;
- activeIndex.value = index
+  isToggled.value = true;
+  activeIndex.value = index;
 }
 
 let characterClass = reactive([
@@ -79,6 +77,7 @@ let { nickname } = useNickname();
 
 .cardBorder
   border: 5px solid green
+  transform: scale(1.1)
 
 .characterName
   color: black
@@ -93,6 +92,7 @@ let { nickname } = useNickname();
   width: 230px
   height: 300px
   max-width: 250px
+  margin: 1rem
 
 .my-card:hover
   transform: scale(1.1)
