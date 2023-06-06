@@ -3,11 +3,13 @@
     <h1>Welcome</h1>
     <p>What is your name?</p>
     <div class="buttonGroup">
+      <button @click="generateName">losowe</button>
+
       <label for="name">
         <input
           type="text"
           placeholder="your nickname"
-          v-model="nickname"
+          v-model="isRandomName.value"
           @keyup="error"
         />
       </label>
@@ -21,19 +23,32 @@
         {{ error }}
       </div>
     </div>
+    <div></div>
   </div>
 </template>
 
 <script>
+import { computed } from "vue";
 import { useNickname } from "../composables/useNickname";
+import { useNameGenerator } from "../composables/useNameGenerator";
 export default {
   setup() {
     let { nickname, isActive, error } = useNickname();
+    let { generatedName, customName, generateName, addCustomName } =
+      useNameGenerator();
+    let isRandomName = computed(() => {
+      return (nickname.value = generatedName);
+    });
 
     return {
+      isRandomName,
       nickname,
       isActive,
       error,
+      generatedName,
+      customName,
+      generateName,
+      addCustomName,
     };
   },
 };
