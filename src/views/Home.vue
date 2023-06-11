@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Welcome</h1>
-    <p>What is your name?</p>
     <div class="buttonGroup">
       <button @click="generateName">losowe</button>
 
@@ -13,8 +12,9 @@
           @keyup="error"
         />
       </label>
+
       <button type="submit">
-        <router-link class="activeStatus" v-if="isActive" to="/character"
+        <router-link class="activeStatus" v-if="isActiveLink" to="/character"
           >Continue</router-link
         >
         <span v-else>Continue</span>
@@ -27,34 +27,31 @@
   </div>
 </template>
 
-<script>
-import { computed } from "vue";
+<script setup>
+import { computed, ref } from "vue";
 import { useNickname } from "../composables/useNickname";
 import { useNameGenerator } from "../composables/useNameGenerator";
-export default {
-  setup() {
-    let { nickname, isActive, error } = useNickname();
-    let { generatedName, customName, generateName, addCustomName } =
-      useNameGenerator();
-    let isRandomName = computed(() => {
-      return (nickname.value = generatedName);
-    });
 
-    return {
-      isRandomName,
-      nickname,
-      isActive,
-      error,
-      generatedName,
-      customName,
-      generateName,
-      addCustomName,
-    };
-  },
-};
+let { nickname, error } = useNickname();
+let { generatedName, generateName, addCustomName } = useNameGenerator();
+let activeLink = ref(false);
+
+let isRandomName = computed(() => {
+  return (nickname.value = generatedName);
+});
+
+let isActiveLink = computed(() => {
+  return generatedName.value.length < 5
+    ? (activeLink.value = false)
+    : (activeLink.value = true);
+});
 </script>
 
 <style>
+input {
+  height: 60px;
+  font-size: 2rem;
+}
 .buttongroup {
   width: 300px;
   display: grid;
