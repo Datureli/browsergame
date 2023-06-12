@@ -7,13 +7,13 @@
       <label for="name">
         <input
           type="text"
-          placeholder="your nickname"
+          placeholder="Nickname"
           v-model="isRandomName.value"
           @keyup="error"
         />
       </label>
 
-      <button type="submit">
+      <button @click="validateNickname" type="submit">
         <router-link class="activeStatus" v-if="isActiveLink" to="/character"
           >Continue</router-link
         >
@@ -32,7 +32,7 @@ import { computed, ref } from "vue";
 import { useNickname } from "../composables/useNickname";
 import { useNameGenerator } from "../composables/useNameGenerator";
 
-let { nickname, error } = useNickname();
+let { nickname, error, validateNickname } = useNickname();
 let { generatedName, generateName, addCustomName } = useNameGenerator();
 let activeLink = ref(false);
 
@@ -47,10 +47,11 @@ let isActiveLink = computed(() => {
 });
 </script>
 
-<style>
+<style scoped>
 input {
   height: 60px;
   font-size: 2rem;
+  margin: 1rem;
 }
 .buttongroup {
   width: 300px;
