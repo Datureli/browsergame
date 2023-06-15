@@ -12,7 +12,6 @@
           @keyup="error"
         />
       </label>
-
       <button @click="validateNickname" type="submit">
         <router-link class="activeStatus" v-if="isActiveLink" to="/character"
           >Continue</router-link

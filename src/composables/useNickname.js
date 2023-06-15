@@ -6,11 +6,10 @@ export function useNickname() {
   const validateNickname = () => {
     if (nickname.value !== null) {
       error.value =
-        nickname.value.length < 1
-          ? ""
+        nickname.value.length < 5
+          ? "dsadsas"
           : "To nie Gothic, musisz wybrać jakieś imię!";
     }
-    return error.value;
   };
   const nicknameLength = computed(() => {
     if (nickname.value) {
