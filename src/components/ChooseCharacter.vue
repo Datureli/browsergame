@@ -7,7 +7,7 @@
         class="text-h3 justify-center q-pa-lg row inline q-gutter-md q-mx-auto"
       >
         <q-card
-          v-for="(characterClass, index) in characterClass"
+          v-for="(characterClasses, index) in characterClasses"
           :key="index"
           height="350"
           @click="toggleClass(index)"
@@ -15,25 +15,28 @@
           :class="{ cardBorder: index === activeIndex }"
         >
           <p class="characterName" style="position: absolute">
-            {{ characterClass.name }}
+            {{ characterClasses.name }}
           </p>
-          <img height="298" :src="characterClass.image" alt="avatar" />
+          <img height="298" :src="characterClasses.image" alt="avatar" />
         </q-card>
       </div>
     </div>
     <button class="continueButton" :disabled="!isToggled">
       <router-link class="activeStatus" to="/sex">Continue</router-link>
     </button>
-    <input type="text" v-model="characterClass.name" />
+    <input type="text" v-model="characterClasses.name" />
   </div>
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 import { useNickname } from "../composables/useNickname";
+import { useCharacterClass } from "../composables/useCharacterClass"
+
+let { nickname } = useNickname();
+let { characterClasses } = useCharacterClass();
 
 let isToggled = ref(false);
-const isDisabled = ref(false);
 let activeIndex = ref(null);
 
 function toggleClass(index) {
@@ -41,25 +44,6 @@ function toggleClass(index) {
   activeIndex.value = index;
 }
 
-let characterClass = reactive([
-  {
-    name: "Paladin",
-    image: new URL("/src/assets/img/paladin.jpg", import.meta.url),
-  },
-  {
-    name: "Mage",
-    image: new URL("/src/assets/img/mage.jpg", import.meta.url),
-  },
-  {
-    name: "Rouge",
-    image: new URL("/src/assets/img/rouge.png", import.meta.url),
-  },
-  {
-    name: "Warrior",
-    image: new URL("/src/assets/img/knight.png", import.meta.url),
-  },
-]);
-let { nickname } = useNickname();
 </script>
 
 <style lang="sass" scoped>
@@ -76,7 +60,6 @@ let { nickname } = useNickname();
   display: flex
 
 .cardBorder
-  border: 5px solid green
   transform: scale(1.1)
 
 .characterName
