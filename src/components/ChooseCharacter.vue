@@ -1,6 +1,6 @@
 <template>
   <div class="characterContainer">
-    <h2>Choose your Character {{ nickname.value }}</h2>
+    <h2>Choose your Character {{ nickname }}</h2>
 
     <div class="cards">
       <div
