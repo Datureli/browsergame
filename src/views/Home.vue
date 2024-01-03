@@ -31,7 +31,7 @@ import { computed, ref } from "vue";
 import { useNickname } from "../composables/useNickname";
 import { useNameGenerator } from "../composables/useNameGenerator";
 
-let { nickname, error, validateNickname } = useNickname();
+let { nickname, error, validateNickname, saveNickname, clearNickname } = useNickname();
 let { generatedName, generateName, addCustomName } = useNameGenerator();
 let activeLink = ref(false);
 
@@ -44,6 +44,14 @@ let isActiveLink = computed(() => {
     ? (activeLink.value = false)
     : (activeLink.value = true);
 });
+
+const handleSubmit = () => {
+      validateNickname();
+      if (error.value === "") {
+        saveNickname(nickname);
+        // Kontynuuj zapis lub wykonaj inne akcje
+      }
+    };
 </script>
 
 <style scoped>

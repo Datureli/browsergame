@@ -1,24 +1,19 @@
 <template>
   <div class="characterContainer">
-    <h2>Choose your Character {{ nickname }}</h2>
+    <h2>Choose your Character {{ nickname.value }}</h2>
 
-    <div>
+    <div class="cards">
       <div
-        class="text-h3 justify-center q-pa-lg row inline q-gutter-md q-mx-auto"
+        v-for="(characterClasses, index) in characterClasses"
+        :key="index"
+        class="my-card"
+        :class="{ cardBorder: index === activeIndex }"
+        @click="toggleClass(index)"
       >
-        <q-card
-          v-for="(characterClasses, index) in characterClasses"
-          :key="index"
-          height="350"
-          @click="toggleClass(index)"
-          class="my-card"
-          :class="{ cardBorder: index === activeIndex }"
-        >
-          <p class="characterName" style="position: absolute">
-            {{ characterClasses.name }}
-          </p>
-          <img height="298" :src="characterClasses.image" alt="avatar" />
-        </q-card>
+        <p class="characterName">
+          {{ characterClasses.name }}
+        </p>
+        <img width="250" height="298" :src="characterClasses.image" alt="avatar" />
       </div>
     </div>
     <button class="continueButton" :disabled="!isToggled">
@@ -31,7 +26,7 @@
 <script setup>
 import { ref } from "vue";
 import { useNickname } from "../composables/useNickname";
-import { useCharacterClass } from "../composables/useCharacterClass"
+import { useCharacterClass } from "../composables/useCharacterClass";
 
 let { nickname } = useNickname();
 let { characterClasses } = useCharacterClass();
@@ -43,46 +38,59 @@ function toggleClass(index) {
   isToggled.value = true;
   activeIndex.value = index;
 }
-
 </script>
 
-<style lang="sass" scoped>
+<style scoped>
+.characterContainer {
+  display: grid;
+  height: 80vh;
+}
 
-.characterContainer
-  display: grid
-  height: 80vh
+.continueButton {
+  width: 200px;
+  margin: 5rem auto;
+}
 
-.continueButton
-  width: 200px
-  margin: 5rem auto
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-.cards
-  display: flex
+.cardBorder {
+  transform: scale(1.1);
+}
 
-.cardBorder
-  transform: scale(1.1)
+.my-card {
+  width: 230px;
+  height: 300px;
+  max-width: 250px;
+  margin: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+}
 
-.characterName
-  color: black
-  font-size: 26px
-  padding-right: 0.6rem
-  text-align: right
-  justify-content: right
-  display: flex
-  width: 100%
+.my-card:hover {
+  transform: scale(1.1);
+}
 
-.my-card
-  width: 230px
-  height: 300px
-  max-width: 250px
-  margin: 1rem
+.characterName {
+  color: white;
+  font-size: 26px;
+  padding-right: 0.6rem;
+  text-align: right;
+  justify-content: right;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
 
-.my-card:hover
-  transform: scale(1.1)
-  transition: 0.5s
-  cursor: pointer
-
-a
-   color: black
-   text-decoration: none
+a {
+  color: black;
+  text-decoration: none;
+}
 </style>
