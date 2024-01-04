@@ -73,15 +73,10 @@ function toggleClass(index) {
   width: 230px;
   height: 300px;
   max-width: 250px;
-  margin: 1rem;
+  margin: 2rem;
   cursor: pointer;
   transition: 0.5s;
   position: relative;
-}
-
-.my-card:hover,
-.my-card img:hover {
-  transform: scale(1.1);
 }
 
 .characterName {
