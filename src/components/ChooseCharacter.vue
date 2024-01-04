@@ -13,7 +13,14 @@
         <p class="characterName">
           {{ characterClasses.name }}
         </p>
-        <img width="250" height="298" :src="characterClasses.image" alt="avatar" />
+        <img
+          width="250"
+          height="298"
+          :src="characterClasses.image"
+          alt="avatar"
+          @mouseover="toggleClass(index)"
+          @mouseout="toggleClass(null)"
+        />
       </div>
     </div>
     <button class="continueButton" :disabled="!isToggled">
@@ -72,7 +79,8 @@ function toggleClass(index) {
   position: relative;
 }
 
-.my-card:hover {
+.my-card:hover,
+.my-card img:hover {
   transform: scale(1.1);
 }
 

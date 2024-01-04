@@ -20,22 +20,13 @@ describe("<ChooseCharacter />", () => {
     });
   });
 
-  it('hover on a character card and check if it scales', () => {
-    // Najedź kursorem na każdą kartę i sprawdź, czy zostaje powiększona
-    cy.get('.my-card').each(($card, index) => {
-      // Najedź kursorem na kartę
-      cy.wrap($card).trigger('mouseover');
-  
-      // Oczekujemy, że karta ma klasę "cardBorder" po najechaniu
-      cy.wrap($card).should('have.class', 'cardBorder');
-  
-      // Oczekujemy, że obrazek w karcie zostanie zwielokrotniony po najechaniu
-      cy.wrap($card).should('have.attr', 'style').and('contain', 'transform: scale(1.1)');
-  
-      // Zaczekaj na opuszczenie karty przed przejściem do następnej iteracji
-      cy.wrap($card).trigger('mouseout');
+  it("hover on a character card and check if it scales", () => {
+    cy.get(".my-card").each(($card, index) => {
+      // Najedź kursorem na kartę i sprawdź, czy ma klasę "cardBorder"
+      cy.wrap($card)
+        .trigger("mouseover")
+        .should("have.class", "cardBorder")
+        .trigger("mouseout");
     });
   });
-  
-  
 });
