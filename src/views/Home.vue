@@ -12,13 +12,13 @@
           @keyup="error"
         />
       </label>
-      <button @click="handleSubmit" type="submit" :disabled="isLoading">
+      <button @click="validateNickname" type="submit">
         <router-link class="activeStatus" v-if="isActiveLink" to="/character"
           >Continue</router-link
         >
         <span v-else>Continue</span>
       </button>
-      <div class="error" v-if="!isLoading && error && generatedName.value">
+      <div class="error" v-if="error">
         {{ error }}
       </div>
     </div>
@@ -34,7 +34,6 @@ import { useNameGenerator } from "../composables/useNameGenerator";
 let { nickname, error, validateNickname, saveNickname, clearNickname } = useNickname();
 let { generatedName, generateName, addCustomName } = useNameGenerator();
 let activeLink = ref(false);
-let isLoading = ref(false);
 
 let isRandomName = computed(() => {
   return (nickname.value = generatedName);
@@ -47,13 +46,11 @@ let isActiveLink = computed(() => {
 });
 
 const handleSubmit = () => {
-  isLoading.value = true;
-  validateNickname();
-  if (error.value === "") {
-    saveNickname(nickname);
-  }
-  isLoading.value = false;
-};
+      validateNickname();
+      if (error.value === "") {
+        saveNickname(nickname);
+      }
+    };
 </script>
 
 <style scoped>
