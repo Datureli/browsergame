@@ -16,15 +16,16 @@ export function useNickname() {
     if (nickname.value !== null) {
       error.value =
         nickname.value.trim().length < 5
-          ? "To nie Gothic, musisz wybrać jakieś imię!"
-          : "";
+          ? ""
+          : "To nie Gothic, musisz wybrać jakieś imię!";
     }
   };
+  
 
   // Zapisz nickname do localStorage
   const saveNickname = () => {
     if (nickname.value !== null) {
-      localStorage.setItem("nickname", nickname.value.trim());
+      localStorage.setItem("nickname", nickname.value);
     }
   };
 

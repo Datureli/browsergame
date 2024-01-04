@@ -49,6 +49,7 @@ const handleSubmit = () => {
       validateNickname();
       if (error.value === "") {
         saveNickname(nickname);
+        // Kontynuuj zapis lub wykonaj inne akcje
       }
     };
 </script>
