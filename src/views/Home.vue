@@ -18,7 +18,7 @@
         >
         <span v-else>Continue</span>
       </button>
-      <div class="error" v-if="error">
+      <div class="error" v-if="validateNickname">
         {{ error }}
       </div>
     </div>
@@ -31,7 +31,7 @@ import { computed, ref } from "vue";
 import { useNickname } from "../composables/useNickname";
 import { useNameGenerator } from "../composables/useNameGenerator";
 
-let { nickname, error, validateNickname, saveNickname, clearNickname } = useNickname();
+let { nickname, error, saveNickname, clearNickname } = useNickname();
 let { generatedName, generateName, addCustomName } = useNameGenerator();
 let activeLink = ref(false);
 
@@ -39,19 +39,29 @@ let isRandomName = computed(() => {
   return (nickname.value = generatedName);
 });
 
-let isActiveLink = computed(() => {
+const validateNickname = () => {
+  if (nickname.value !== null) {
+    error.value =
+      nickname.value.length < 5
+        ? ""
+        : "To nie Gothic, musisz wybrać jakieś imię!";
+  }
+};
+
+let isActiveLink = computed((even) => {
   return generatedName.value.length < 5
     ? (activeLink.value = false)
     : (activeLink.value = true);
+    
 });
 
-const handleSubmit = () => {
-      validateNickname();
-      if (error.value === "") {
-        saveNickname(nickname);
-        // Kontynuuj zapis lub wykonaj inne akcje
-      }
-    };
+const handleSubmit = (event) => {
+  validateNickname();
+  if (error.value === "") {
+    saveNickname(nickname);
+  }
+  event.preventDefault(); // Zapobiegnij domyślnemu zachowaniu formularza
+};
 </script>
 
 <style scoped>
