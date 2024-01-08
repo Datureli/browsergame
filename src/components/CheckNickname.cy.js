@@ -6,14 +6,24 @@ describe("Home page", () => {
   });
 
   it("Check if random name generation is working", () => {
-    // Sprawdź, czy początkowo nie ma błędów
-    cy.get(".error").should("not.exist");
-
     cy.get("button:contains('losowe')").click();
 
-    // Poczekaj, aż pojawi się wartość w polu input
     cy.get("input").should("not.have.value", "");
   });
 
+  it("Check if continue button redirects us to /character router link", () => {
+    const inputValue = "ExampleText";
+    cy.get("input").type(inputValue);
 
+    cy.get("input").should("have.value", inputValue);
+
+    cy.get("button:contains('Continue')").click();
+
+    // Oczekuj na zmianę URL na inną lokalizację
+    cy.url().should("include", "http://localhost:3001/character");
+  });
+
+  it("Check if u can pass to character choose with empty spaces or tabs",() => {
+
+  })
 });

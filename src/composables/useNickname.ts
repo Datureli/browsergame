@@ -1,6 +1,6 @@
 import { ref, Ref, onMounted } from "vue";
 
-let nickname: Ref<string | null> = ref(null);
+let nickname: Ref<string > = ref("");
 const error: Ref<string> = ref("");
 
 export function useNickname() {
@@ -21,7 +21,7 @@ export function useNickname() {
 
   // Wyczyść nickname z localStorage
   const clearNickname = () => {
-    nickname.value = null;
+    nickname.value = "";
     localStorage.removeItem("nickname");
   };
 

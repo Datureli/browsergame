@@ -12,17 +12,21 @@
           @keyup="error"
         />
       </label>
-      <button @click="validateNickname" type="submit">
-        <router-link class="activeStatus" v-if="isActiveLink" to="/character"
-          >Continue</router-link
+      <router-link to="/character">
+        <button
+          :disabled="!isActiveLink"
+          :class="isActiveLink ? 'activeStatus' : ''"
+          @click="validateNickname"
+          type="submit"
         >
-        <span v-else>Continue</span>
-      </button>
+          Continue
+        </button>
+        {{ nickname.value.length }}
+      </router-link>
       <div class="error" v-if="validateNickname">
         {{ error }}
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
@@ -52,7 +56,6 @@ let isActiveLink = computed((even) => {
   return generatedName.value.length < 5
     ? (activeLink.value = false)
     : (activeLink.value = true);
-    
 });
 
 const handleSubmit = (event) => {
@@ -60,7 +63,7 @@ const handleSubmit = (event) => {
   if (error.value === "") {
     saveNickname(nickname);
   }
-  event.preventDefault(); // Zapobiegnij domyślnemu zachowaniu formularza
+  event.preventDefault();
 };
 </script>
 
@@ -69,11 +72,6 @@ input {
   height: 60px;
   font-size: 2rem;
   margin: 1rem;
-}
-.buttongroup {
-  width: 300px;
-  display: grid;
-  margin: auto;
 }
 .error {
   margin-top: 5px;
