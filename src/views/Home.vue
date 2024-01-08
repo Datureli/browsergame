@@ -21,7 +21,6 @@
         >
           Continue
         </button>
-        {{ nickname.value.length }}
       </router-link>
       <div class="error" v-if="validateNickname">
         {{ error }}
@@ -45,13 +44,13 @@ let isRandomName = computed(() => {
 
 const validateNickname = () => {
   if (nickname.value !== null) {
+    const trimmedNickname = nickname.value.trim();
     error.value =
-      nickname.value.length < 5
+      trimmedNickname.length >= 5 && trimmedNickname.length <= 20
         ? ""
-        : "To nie Gothic, musisz wybrać jakieś imię!";
+        : "To nie Gothic, musisz wybrać jakieś imię o długości od 5 do 20 znaków!";
   }
 };
-
 let isActiveLink = computed((even) => {
   return generatedName.value.length < 5
     ? (activeLink.value = false)
