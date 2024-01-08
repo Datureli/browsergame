@@ -17,14 +17,14 @@ describe("Home page", () => {
 
     cy.get("input").should("have.value", inputValue);
 
-    cy.get("button:contains('Continue')").click();
-    cy.wait(3000);
+    cy.get("button:contains('Continue')").trigger('mouseover').click()
 
-    // Oczekuj na zmianę URL na inną lokalizację
-    cy.url().should("eq", "http://localhost:3001/character");
+    cy.url().should("include", "/character");
   });
 
   it("Check if u can pass to character choose with empty spaces or tabs",() => {
-
+    cy.get("input")
+    .type("   ")
+    .should("not.have.value", "");
   })
 });

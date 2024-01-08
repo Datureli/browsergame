@@ -17,7 +17,6 @@
           :disabled="!isActiveLink"
           :class="isActiveLink ? 'activeStatus' : ''"
           @click="validateNickname"
-          type="submit"
         >
           Continue
         </button>
@@ -43,18 +42,19 @@ let isRandomName = computed(() => {
 });
 
 const validateNickname = () => {
-  if (nickname.value !== null) {
+  if (typeof nickname.value === 'string') {
     const trimmedNickname = nickname.value.trim();
     error.value =
-      trimmedNickname.length >= 5 && trimmedNickname.length <= 20
+      trimmedNickname.length >= 5 && trimmedNickname.length <= 20 && !/^\s*$/.test(trimmedNickname)
         ? ""
         : "To nie Gothic, musisz wybrać jakieś imię o długości od 5 do 20 znaków!";
   }
 };
-let isActiveLink = computed((even) => {
-  return generatedName.value.length < 5
-    ? (activeLink.value = false)
-    : (activeLink.value = true);
+let isActiveLink = computed(() => {
+  return (
+    generatedName.value.trim().length >= 5 && generatedName.value.trim().length <= 20 &&
+    !/^\s*$/.test(generatedName.value)
+  );
 });
 
 const handleSubmit = (event) => {
