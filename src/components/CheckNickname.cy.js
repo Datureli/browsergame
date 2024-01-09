@@ -10,7 +10,7 @@ describe("Home page", () => {
 
     cy.get("input").should("not.have.value", "");
   });
-
+// cypress klika w przycisk za pomocą click zanim vue dostarcza event @click
   it("Check if continue button redirects us to /character router link", () => {
     const inputValue = "ExampleText";
     cy.get("input").type(inputValue);

@@ -42,17 +42,20 @@ let isRandomName = computed(() => {
 });
 
 const validateNickname = () => {
-  if (typeof nickname.value === 'string') {
+  if (typeof nickname.value === "string") {
     const trimmedNickname = nickname.value.trim();
     error.value =
-      trimmedNickname.length >= 5 && trimmedNickname.length <= 20 && !/^\s*$/.test(trimmedNickname)
+      trimmedNickname.length >= 5 &&
+      trimmedNickname.length <= 20 &&
+      !/^\s*$/.test(trimmedNickname)
         ? ""
         : "To nie Gothic, musisz wybrać jakieś imię o długości od 5 do 20 znaków!";
   }
 };
 let isActiveLink = computed(() => {
   return (
-    generatedName.value.trim().length >= 5 && generatedName.value.trim().length <= 20 &&
+    generatedName.value.trim().length >= 5 &&
+    generatedName.value.trim().length <= 20 &&
     !/^\s*$/.test(generatedName.value)
   );
 });

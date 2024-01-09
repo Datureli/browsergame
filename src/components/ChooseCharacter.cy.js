@@ -1,4 +1,5 @@
 import ChooseCharacter from "./ChooseCharacter.vue";
+import Home from "../views/Home.vue"
 
 describe("<ChooseCharacter />", () => {
   beforeEach(() => {
@@ -12,7 +13,6 @@ describe("<ChooseCharacter />", () => {
   });
 
   it("check if image exist", () => {
-    // Wybieramy wszystkie elementy z klasą "my-card", które są kartami postaci
     cy.get(".my-card").each(($card, index) => {
       // Sprawdzamy, czy istnieje element img wewnątrz każdej karty
       cy.wrap($card).find("img").should("exist");
@@ -34,5 +34,31 @@ describe("<ChooseCharacter />", () => {
 
       cy.wrap($card).should("have.class", "cardBorder");
     });
+  });
+
+  it("sprawdź, czy nickname jest taki sam, jak ten wpisany w komponencie Home", () => {
+    const typedNickname = "przykładowyNickname";
+    cy.mount({
+      template: `<Home />`,
+      components: { Home },
+    });
+
+    // Wprowadź nickname na stronie Home
+    cy.get("input[type='text']").should('be.visible').click({ force: true }).type(typedNickname);
+    cy.get("button").contains("Continue").click();
+
+    // Zamontuj komponent ChooseCharacter i przekazuj nickname jako prop
+    cy.mount({
+      template: `<ChooseCharacter :nickname="typedNickname" />`,
+      components: { ChooseCharacter },
+      data() {
+        return {
+          typedNickname,
+        };
+      },
+    });
+
+    // Sprawdź, czy nickname w ChooseCharacter jest zgodny z wpisanym w Home
+    cy.get(".characterContainer h2").should("contain", typedNickname);
   });
 });
