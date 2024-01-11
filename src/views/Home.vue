@@ -4,12 +4,14 @@
     <div class="buttonGroup">
       <button @click="generateName">losowe</button>
 
-      <label for="name">
+      <label for="nickname">
         <input
           type="text"
           placeholder="Nickname"
           v-model="isRandomName.value"
           @keyup="error"
+          @input="handleInput"
+          id="nicknameInput"
         />
       </label>
       <router-link to="/character">
@@ -59,6 +61,15 @@ let isActiveLink = computed(() => {
     !/^\s*$/.test(generatedName.value)
   );
 });
+
+const handleInput = () => {
+  generatedName.value = generatedName.value.replace(
+    /[!@#$%^&*(),.?":{}|<>]/g,
+    ""
+  );
+
+  validateNickname();
+};
 
 const handleSubmit = (event) => {
   validateNickname();
