@@ -23,7 +23,7 @@
           Continue
         </button>
       </router-link>
-      <div class="error" v-if="validateNickname">
+      <div class="error" v-if="error">
         {{ error }}
       </div>
     </div>
@@ -57,8 +57,7 @@ const validateNickname = () => {
 let isActiveLink = computed(() => {
   return (
     generatedName.value.trim().length >= 5 &&
-    generatedName.value.trim().length <= 20 &&
-    !/^\s*$/.test(generatedName.value)
+    generatedName.value.trim().length <= 20 
   );
 });
 
