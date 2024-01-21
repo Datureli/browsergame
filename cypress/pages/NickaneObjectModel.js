@@ -14,6 +14,14 @@ class HomePage {
     getNicknameInput() {
       return cy.get("#nicknameInput");
     }
+
+    checkIfPlaceholderIsNotEmpty() {
+      this.inputField().invoke('attr', 'placeholder').should('not.be.empty');
+    }
+
+    checkIfPlacerholderHasCorrectName() {
+      this.inputField().invoke('attr', 'placeholder').should('eq', 'Nickname');
+    }
   
     checkIfRandomNameGenerated() {
       this.clickRandomNameButton();

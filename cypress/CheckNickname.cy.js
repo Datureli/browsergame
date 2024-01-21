@@ -1,25 +1,33 @@
-// home.spec.js
-import homePage from "./pages/NickaneObjectModel";
+import NicknameObjectModel from "./pages/NickaneObjectModel";
 import Home from "../src/views/Home.vue";
 
-describe("Strona główna", () => {
+
+describe("Home Page", () => {
   beforeEach(() => {
     cy.mount(Home);
   });
 
-  it("Sprawdź, czy losowa generacja nazwy działa", () => {
-    homePage.checkIfRandomNameGenerated();
+  it("Check if random name generation is working", () => {
+    NicknameObjectModel.checkIfRandomNameGenerated();
   });
 
-  it("Sprawdź, czy można przejść do wyboru postaci z pustymi odstępami lub tabulatorami", () => {
-    homePage.checkIfEmptySpacesOrTabsNotAllowed();
+  it("Check if placeholder is not empty", () => {
+    NicknameObjectModel.checkIfPlaceholderIsNotEmpty();
+  })
+
+  it("Check if placeholder value is equal to nickname", () => {
+    NicknameObjectModel.checkIfPlacerholderHasCorrectName();
+  })
+
+  it("Check if you can pass to character choose with empty spaces or tabs", () => {
+    NicknameObjectModel.checkIfEmptySpacesOrTabsNotAllowed();
   });
 
-  it("Sprawdź, czy przycisk 'Continue' ma klasę 'activeLink' po wprowadzeniu więcej niż 5 znaków w polu 'nickname'", () => {
-    homePage.checkIfContinueButtonHasActiveLinkClass();
+  it("Check if the 'Continue' button has the 'activeLink' class when the 'nickname' field is longer than 5 characters", () => {
+    NicknameObjectModel.checkIfContinueButtonHasActiveLinkClass();
   });
 
-  it("Sprawdź, czy pole nie zawiera znaków specjalnych", () => {
-    homePage.checkIfInputDoesNotContainSpecialCharacters();
+  it("Should check if the input does not contain special characters", () => {
+    NicknameObjectModel.checkIfInputDoesNotContainSpecialCharacters();
   });
 });
