@@ -2,7 +2,7 @@ import NicknameObjectModel from "./pages/NickaneObjectModel";
 import Home from "../src/views/Home.vue";
 
 
-describe("Home Page", () => {
+describe("Nickname tests", () => {
   beforeEach(() => {
     cy.mount(Home);
   });
