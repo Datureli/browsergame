@@ -8,6 +8,7 @@ describe("test login", () => {
     cy.get("#login_password").type("Misio222");
 
     cy.get("#login_next").click();
+    cy.url().should("include", "/pulpit.html");
   });
 
   it("login with incorrect credentials", () => {
