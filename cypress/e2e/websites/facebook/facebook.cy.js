@@ -16,14 +16,12 @@ describe("Test strony logowania", () => {
 
   it("Password value is hidden", () => {
     cy.get('[data-testid="royal_pass"]').type("TwojeHasło");
-
     cy.get("#pass").should("have.attr", "type", "password");
   })
 
   it("Password should be visible after click on hide-password icon", () => {
     cy.get('[data-testid="royal_pass"]').type("TwojeHasło");
-    cy.get("div._9lsb._9ls9#u_0_4_AS").click();
-
+    cy.get('div._9lsb._9ls9#u_0_4_AS').click({ force: true });
 
     cy.get("#pass").should("have.attr", "type", "text");
   });
