@@ -37,4 +37,13 @@ describe("test user desktop", () => {
     cy.get("#show_messages").should("not.be.visible");
     // false - user can send payment with value 0
   })
+
+  it("send quick payment with ,, instad of value", () => {
+    cy.get("#widget_1_transfer_receiver").select(1);
+    cy.get("#widget_1_transfer_amount").clear().type(",,,,");
+    cy.get("#widget_1_transfer_title").type("Przelew");
+
+    cy.get("#execute_btn").click();
+    cy.get("#show_messages").should("not.be.visible");
+  })
 });
