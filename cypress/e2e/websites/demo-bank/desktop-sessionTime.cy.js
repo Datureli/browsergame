@@ -15,11 +15,33 @@ describe("test session time after succesfull log in", () => {
 
     for (let i = 0; i < secondsToCheck; i++) {
       cy.wait(1000);
-  
-      cy.get('#countdown_seconds').invoke('text').then((currentValue) => {
-        const expectedValue = 59 - i;
-        expect(currentValue).to.eq(expectedValue.toString());
-      });
+
+      cy.get("#countdown_seconds")
+        .invoke("text")
+        .then((currentValue) => {
+          const expectedValue = 59 - i;
+          expect(currentValue).to.eq(expectedValue.toString());
+        });
     }
+  });
+
+  it("Check if the counter resets after refreshing", () => {
+    cy.wait(5000);
+
+    cy.get("#countdown_minutes").invoke("text").as("initialMinutes");
+    cy.get("#countdown_seconds").invoke("text").as("initialSeconds");
+
+    cy.reload();
+
+    cy.get("#countdown_minutes").should("have.text", "10");
+    cy.get("#countdown_seconds").should("have.text", "00");
+
+    cy.get("@initialMinutes").then((initialMinutes) => {
+      cy.get("#countdown_minutes").invoke("text").should("eq", initialMinutes);
+    });
+
+    cy.get("@initialSeconds").then((initialSeconds) => {
+      cy.get("#countdown_seconds").invoke("text").should("eq", initialSeconds);
+    });
   });
 });
