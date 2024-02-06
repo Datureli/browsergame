@@ -44,4 +44,11 @@ describe("test session time after succesfull log in", () => {
       cy.get("#countdown_seconds").invoke("text").should("eq", initialSeconds);
     });
   });
+
+  it("Check if you will be logged out after 10 minutes", () => {
+    cy.clock();
+    cy.tick(600000);
+
+    cy.url().should("eq", "https://demobank.jaktestowac.pl/logowanie_etap_1.html");
+  })
 });
