@@ -2,11 +2,10 @@
   <div>
     <h1>Welcome</h1>
     <div class="buttonGroup">
-      <button @click="generateName">losowe</button>
-
       <label for="nickname">
         <input
           type="text"
+          style="padding-left: 5px"
           placeholder="Nickname"
           v-model="isRandomName.value"
           @keyup="error"
@@ -14,17 +13,20 @@
           id="nicknameInput"
         />
       </label>
-      <router-link to="/character">
-        <button
-          :disabled="!isActiveLink"
-          :class="isActiveLink ? 'activeStatus' : ''"
-          @click="validateNickname"
-        >
-          Continue
-        </button>
-      </router-link>
-      <div class="error" v-if="error">
-        {{ error }}
+      <div>
+        <router-link to="/character">
+          <button
+            :disabled="!isActiveLink"
+            :class="isActiveLink ? 'activeStatus' : ''"
+            @click="validateNickname"
+          >
+            Continue
+          </button>
+        </router-link>
+        <div class="error" v-if="error">
+          {{ error }}
+        </div>
+        <button @click="generateName">Random</button>
       </div>
     </div>
   </div>
@@ -57,7 +59,7 @@ const validateNickname = () => {
 let isActiveLink = computed(() => {
   return (
     generatedName.value.trim().length >= 5 &&
-    generatedName.value.trim().length <= 20 
+    generatedName.value.trim().length <= 20
   );
 });
 
