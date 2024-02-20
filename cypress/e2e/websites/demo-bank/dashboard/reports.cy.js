@@ -15,11 +15,24 @@ describe("test report section", () => {
     });
   };
 
+  const uploadFileTest = (buttonId, filePath) => {
+    cy.wrap(iframe).within(() => {
+      cy.get(buttonId).attachFile(filePath);
+    });
+  };
+
   it("Check if i can download txt file", () => {
     downloadFileTest("#btn_dl_txt", "txt");
   });
 
   it("Check if i can download zip file", () => {
     downloadFileTest("#btn_dl_zip", "zip");
+  });
+
+  it("Check if i can send a txt file to browser", () => {
+    cy.wrap(iframe).within(() => {
+      cy.get('#my_file_1').click({ force: true }).attachFile('test.txt', { force: true })
+      cy.get('input[type=file]').selectFile('example.json');
+    });
   });
 });

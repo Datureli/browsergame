@@ -7,6 +7,7 @@ export default defineConfig({
       bundler: "vite",
     },
   },
+  reporter: 'reporters/custom.js',
 
   e2e: {
     setupNodeEvents(on, config) {
