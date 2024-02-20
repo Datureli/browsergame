@@ -11,7 +11,9 @@ describe("test report section", () => {
   const downloadFileTest = (buttonId, fileExtension) => {
     cy.wrap(iframe).within(() => {
       cy.get(buttonId).click();
-      cy.readFile(`C:/Users/48578/Downloads/proposed_file_name.${fileExtension}`);
+      cy.readFile(
+        `C:/Users/48578/Downloads/proposed_file_name.${fileExtension}`
+      );
     });
   };
 
@@ -31,8 +33,8 @@ describe("test report section", () => {
 
   it("Check if i can send a txt file to browser", () => {
     cy.wrap(iframe).within(() => {
-      cy.get('#my_file_1').click({ force: true }).attachFile('test.txt', { force: true })
-      cy.get('input[type=file]').selectFile('example.json');
+      cy.get("#my_file_1").click({ force: true }).attachFile("test.txt");
+      cy.get("span.filename").should("contain.text", "test.txt");
     });
   });
 });
