@@ -44,4 +44,11 @@ describe("test report section", () => {
       cy.get("span.filename").should("contain.text", "example.json");
     });
   });
+
+  it("check summary report", () => {
+    cy.wrap(iframe).within(() => {
+      cy.get("#get_table_report_btn").click();
+      cy.get("#table").should("be.visible");
+    });
+  });
 });
