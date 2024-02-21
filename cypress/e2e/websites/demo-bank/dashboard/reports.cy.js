@@ -37,4 +37,11 @@ describe("test report section", () => {
       cy.get("span.filename").should("contain.text", "test.txt");
     });
   });
+
+  it("Check if i can send a json file to browser", () => {
+    cy.wrap(iframe).within(() => {
+      cy.get("#my_file_2").click({ force: true }).attachFile("example.json");
+      cy.get("span.filename").should("contain.text", "example.json");
+    });
+  });
 });
