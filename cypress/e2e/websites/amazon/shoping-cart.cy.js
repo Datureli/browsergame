@@ -4,7 +4,7 @@ describe("check box elements", () => {
     cy.get("#sp-cc-accept").click();
   });
 
-  it("check if message appear if counter has value 0", () => {
+  it("Check if a message appears when the counter has a value of 0", () => {
     cy.get("#nav-cart-count").should('have.text', '0');
 
     cy.get("h2:contains('Twój koszyk Amazon jest pusty')")
