@@ -41,7 +41,6 @@ describe("register new account", () => {
 
   it("Check if i can register user with existed username account", () => {
     cy.get("#loginPanel a:contains('Register')").click();
-    cy.get("#loginPanel a:contains('Register')").click();
 
     cy.get('[name="customer.firstName"]').type("Pawel");
     cy.get('[name="customer.lastName"]').type("Niewiadomski");
@@ -56,7 +55,7 @@ describe("register new account", () => {
     cy.get('[name="repeatedPassword"]').type("Pawel123");
     cy.get('input[type="submit"][value="Register"]').click();
 
-    cy.get("#customer.username.errors")
+    cy.get(".error")
       .should("be.visible")
       .contains("This username already exists.");
   });
