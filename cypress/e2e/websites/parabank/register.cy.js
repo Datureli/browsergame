@@ -59,4 +59,8 @@ describe("register new account", () => {
       .should("be.visible")
       .contains("This username already exists.");
   });
+
+  it("Check if all field are required", () => {
+    
+  })
 });

@@ -3,8 +3,20 @@ describe("test bank login", () => {
     cy.visit("https://parabank.parasoft.com/parabank/index.htm");
   });
 
-  it("test if i can login with inccorect credential", () => {
+  it("test if i can login with inccorect credentials", () => {
     cy.get('#loginPanel input[type="text"]').type("dasdsa");
     cy.get('#loginPanel input[type="password"]').type("password1");
+  });
+
+  it("Login with correct credentials", () => {
+    cy.get('#loginPanel input[type="text"]').type("Datureli11");
+    cy.get('#loginPanel input[type="password"]').type("Pawel123");
+
+    cy.get('input[type="submit"]').click();
+
+    cy.get(".smallText")
+    .should("be.visible")
+    .invoke("text")
+    .should("include", "Welcome Pawel Niewiadomski");
   });
 });
