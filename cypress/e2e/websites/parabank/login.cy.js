@@ -17,6 +17,6 @@ describe("test bank login", () => {
     cy.get(".smallText")
     .should("be.visible")
     .invoke("text")
-    .should("include", "Welcome Pawel Niewiadomski");
+    .should("include", "Welcome John Smith");
   });
 });
