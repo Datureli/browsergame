@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("Try add item to cart", async ({ page }) => {
+test("Check if cart quantity changing after add item to cart", async ({ page }) => {
   await page.goto(
     "https://magento.softwaretestingboard.com/collections/yoga-new.html"
   );
