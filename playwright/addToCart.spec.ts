@@ -54,7 +54,7 @@ test("check if item has been added to cart", async ({ page }) => {
 
 test.only("check if the cart icon opens a modal window", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
-  const link = await page.getByRole('link', { name: 'My Cart' }).click();
+  await page.getByRole('link', { name: 'My Cart' }).click();
   
   await expect(page.locator('#ui-id-1')).toBeVisible();
 });
