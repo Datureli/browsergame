@@ -52,9 +52,24 @@ test("check if item has been added to cart", async ({ page }) => {
   expect(isProductVisible).toBe(true);
 });
 
-test.only("check if the cart icon opens a modal window", async ({ page }) => {
+test("check if the cart icon opens a modal window", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByRole('link', { name: 'My Cart' }).click();
   
   await expect(page.locator('#ui-id-1')).toBeVisible();
 });
+
+test("Check if there is information that the basket is empty", async ({ page }) => {
+  await page.goto("https://magento.softwaretestingboard.com/");
+  await page.getByRole('link', { name: 'My Cart' }).click();
+
+  await expect(page.getByText('You have no items in your shopping cart.')).toBeVisible();
+})
+
+test.only("check if the active class is added to it after opening the basket icon", async ({ page }) => {
+  await page.goto("https://magento.softwaretestingboard.com/");
+  await page.getByRole('link', { name: 'My Cart' }).click();
+
+  await expect(page.getByRole('link', { name: 'My Cart' })).toHaveClass(/active/);
+
+})
