@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.only("check register user", async ({ page }) => {
+test("check register user", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
 
   await page.getByRole('link', { name: 'Create an Account' }).click();
@@ -12,5 +12,12 @@ test.only("check register user", async ({ page }) => {
   await page.getByLabel('Confirm Password').fill("Misio150");
   await page.getByRole('button', { name: 'Create an Account' }).click();
 });
+
+test.only("check password strength only with lowercase character - weak", async ({ page }) => {
+  await page.getByRole('textbox', { name: 'Password*', exact: true }).fill("Misi");
+  await page.getByLabel('Confirm Password').fill("Misi");
+
+  await expect(page.getByText('Minimum length of this field')).toBeVisible();
+})
 
 //test("can i repeat diffrent password")
