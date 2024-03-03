@@ -66,7 +66,7 @@ test("Check if there is information that the basket is empty", async ({ page }) 
   await expect(page.getByText('You have no items in your shopping cart.')).toBeVisible();
 })
 
-test.only("check if the active class is added to it after opening the basket icon", async ({ page }) => {
+test("check if the active class is added to it after opening the basket icon", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByRole('link', { name: 'My Cart' }).click();
 
