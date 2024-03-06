@@ -24,7 +24,10 @@ test.only("check password strength only with lowercase character - weak", async 
 })
 */
 
-test.only("Repeating a password with a different value", async ({ page }) => {
+test("Repeating a password with a different value", async ({ page }) => {
+  const expectedErrorText = 'Please enter the same value again.';
+  const passwordConfirmationError =   await page.locator('#password-confirmation-error').textContent();
+
   await page.goto("https://magento.softwaretestingboard.com/");
 
   await page.getByRole('link', { name: 'Create an Account' }).click();
@@ -33,8 +36,17 @@ test.only("Repeating a password with a different value", async ({ page }) => {
 
   await page.getByRole('button', { name: 'Create an Account' }).click();
 
-  const expectedErrorText = 'Please enter the same value again.';
-  const passwordConfirmationError =   await page.locator('#password-confirmation-error').textContent();
-
   expect(passwordConfirmationError).toBe(expectedErrorText);
+})
+
+test.only("Password below 8 characters did not pass", async ({ page }) => {
+  const passwordError = await page.locator("#password-error").textContent();
+  const errorValue = "Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored."
+  await page.goto("https://magento.softwaretestingboard.com/");
+  await page.getByRole('link', { name: 'Create an Account' }).click();
+
+  await page.getByRole('textbox', { name: 'Password*', exact: true }).fill("7length");
+  await page.getByRole('button', { name: 'Create an Account' }).click();
+ 
+  expect(passwordError).toBe(errorValue);
 })
