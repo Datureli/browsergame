@@ -24,7 +24,7 @@ test.only("check password strength only with lowercase character - weak", async 
 })
 */
 
-test.only("can i repeat diffrent password", async ({ page }) => {
+test.only("Repeating a password with a different value", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
 
   await page.getByRole('link', { name: 'Create an Account' }).click();
