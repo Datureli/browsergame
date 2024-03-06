@@ -34,8 +34,7 @@ test.only("can i repeat diffrent password", async ({ page }) => {
   await page.getByRole('button', { name: 'Create an Account' }).click();
 
   const expectedErrorText = 'Please enter the same value again.';
-  const passwordConfirmationError = await page.innerText('#password-confirmation-error');
-  
-  // Sprawdź, czy tekst jest równy oczekiwanemu błędowi
+  const passwordConfirmationError =   await page.locator('#password-confirmation-error').textContent();
+
   expect(passwordConfirmationError).toBe(expectedErrorText);
 })
