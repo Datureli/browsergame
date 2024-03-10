@@ -49,3 +49,19 @@ test("Password below 8 characters did not pass", async ({ page }) => {
   const errorValue = "Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored."
   expect(passwordError).toBe(errorValue);
 });
+
+
+test("test email field", async ({ page }) => {
+  await page.goto("https://magento.softwaretestingboard.com/");
+  await page.getByRole('link', { name: 'Create an Account' }).click();
+
+  await page.getByLabel('Email', { exact: true }).fill("dsadasdsa");
+
+  await page.getByRole('button', { name: 'Create an Account' }).click();
+  const emailError = await page.locator("#email_address-error").textContent()
+  const erroeMessage = "Please enter a valid email address (Ex: johndoe@domain.com)."
+  expect(emailError).toBe(erroeMessage)
+})
+
+
+// try create account with existing email 
