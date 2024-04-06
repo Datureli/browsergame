@@ -24,8 +24,6 @@ test("check password strength only with lowercase character - weak", async ({ pa
 });
 
 test("Repeating a password with a different value", async ({ page }) => {
-
-
   await page.goto("https://magento.softwaretestingboard.com/");
 
   await page.getByRole('link', { name: 'Create an Account' }).click();
@@ -39,17 +37,16 @@ test("Repeating a password with a different value", async ({ page }) => {
 });
 
 test("Password below 8 characters did not pass", async ({ page }) => {
-
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByRole('link', { name: 'Create an Account' }).click();
 
   await page.getByRole('textbox', { name: 'Password*', exact: true }).fill("7length");
   await page.getByRole('button', { name: 'Create an Account' }).click();
+  
   const passwordError = await page.locator("#password-error").textContent();
   const errorValue = "Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored."
   expect(passwordError).toBe(errorValue);
 });
-
 
 test("test email field", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
@@ -63,5 +60,10 @@ test("test email field", async ({ page }) => {
   expect(emailError).toBe(erroeMessage)
 })
 
+test("Try create account with existing email ", async ({ page}) => {
+  await page.goto("https://magento.softwaretestingboard.com/");
+  await page.getByRole('link', { name: 'Create an Account' }).click();
 
-// try create account with existing email 
+  await page.getByLabel('Email', { exact: true }).fill("soleris1@gmail.com");
+  await page.getByRole('button', { name: 'Create an Account' }).click();
+})
