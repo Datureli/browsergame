@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test";
-//import { cartOptions } from "./pages/cart.js";
 
 test("Check if cart quantity changing after add item to cart", async ({
   page,
