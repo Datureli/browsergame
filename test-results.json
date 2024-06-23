@@ -86,13 +86,13 @@
   },
   "suites": [
     {
-      "title": "search.spec.ts",
-      "file": "search.spec.ts",
+      "title": "register.spec.ts",
+      "file": "register.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Try to search item below 3 letters",
+          "title": "Sprawdź siłę hasła wyłącznie z małymi literami - słabe",
           "ok": false,
           "tags": [],
           "tests": [
@@ -104,53 +104,53 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 25,
+                  "workerIndex": 34,
                   "status": "failed",
-                  "duration": 11507,
+                  "duration": 5855,
                   "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Minimum Search query length is 31')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Minimum Search query length is 31')\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Minimum Search query length is 31')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Minimum Search query length is 31')\u001b[22m\n\n    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\search.spec.ts:23:69",
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Weak\"\u001b[39m\nReceived: \u001b[31m\"No Password\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Weak\"\u001b[39m\nReceived: \u001b[31m\"No Password\"\u001b[39m\n    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts:43:32",
                     "location": {
-                      "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\search.spec.ts",
-                      "column": 69,
-                      "line": 23
+                      "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts",
+                      "column": 32,
+                      "line": 43
                     },
-                    "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Search entire store here...\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Minimum Search query length is 31\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 41 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 42 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m   expect(passwordStrengthText)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Weak'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\search.spec.ts",
-                        "column": 69,
-                        "line": 23
+                        "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts",
+                        "column": 32,
+                        "line": 43
                       },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Minimum Search query length is 31')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Minimum Search query length is 31')\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Search entire store here...\"\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Minimum Search query length is 31\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\search.spec.ts:23:69\u001b[22m"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Weak\"\u001b[39m\nReceived: \u001b[31m\"No Password\"\u001b[39m\n\n\u001b[0m \u001b[90m 41 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 42 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m   expect(passwordStrengthText)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Weak'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts:43:32\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-04-06T12:08:13.101Z",
+                  "startTime": "2024-05-14T21:17:40.124Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\search-Try-to-search-item-below-3-letters-chromium\\trace.zip"
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\register-Sprawdź-siłę-hasła-wyłącznie-z-małymi-literami---słabe-chromium\\trace.zip"
                     }
                   ],
                   "errorLocation": {
-                    "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\search.spec.ts",
-                    "column": 69,
-                    "line": 23
+                    "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts",
+                    "column": 32,
+                    "line": 43
                   }
                 }
               ],
               "status": "unexpected"
             }
           ],
-          "id": "a088064de9fe351eef5f-23dcc26543d9dfc8b77e",
-          "file": "search.spec.ts",
-          "line": 18,
+          "id": "ab6fb19b790d2390d751-fffa919ad12116728675",
+          "file": "register.spec.ts",
+          "line": 16,
           "column": 5
         }
       ]
@@ -158,8 +158,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-04-06T12:08:10.313Z",
-    "duration": 16398.63599999249,
+    "startTime": "2024-05-14T21:17:38.604Z",
+    "duration": 8209.132000000216,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,

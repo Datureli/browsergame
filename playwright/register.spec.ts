@@ -13,15 +13,38 @@ test("check register user", async ({ page }) => {
   await page.getByRole('button', { name: 'Create an Account' }).click();
 });
 
-test("check password strength only with lowercase character - weak", async ({ page }) => {
+test("Sprawdź siłę hasła wyłącznie z małymi literami - słabe", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
-  await page.getByRole('link', { name: 'Create an Account' }).click();
- 
-  await page.getByRole('textbox', { name: 'Password*', exact: true }).fill("misio");
-  const expectedErrorText = 'Weak';
-  const passwordConfirmationError = await page.locator('#password-strength-meter-label').textContent();
-  await expect(passwordConfirmationError).toBe(expectedErrorText);
+
+  // Poczekaj na pojawienie się linku "Create an Account" i kliknij
+  await page.waitForSelector('text="Create an Account"', { timeout: 5000 });
+  await page.click('text="Create an Account"');
+
+  await page.fill('input[name="password"]', 'misio');
+
+  // Poczekaj na pojawienie się rodzica elementu z tekstem "Password Strength:"
+  const parentElement = await page.waitForSelector('#password-strength-meter');
+
+  // Znajdź dziecko wewnątrz rodzica z identyfikatorem "password-strength-meter-label"
+  const isChildVisible = await parentElement.evaluate((parent) => {
+    const child = parent.querySelector('#password-strength-meter-label');
+    return child ? window.getComputedStyle(child).getPropertyValue('display') !== 'none' : false;
+  });
+
+  // Sprawdź, czy element jest widoczny
+  expect(isChildVisible).toBeTruthy();
+
+  // Sprawdź, czy element zawiera tekst "Weak"
+  const passwordStrengthText = await parentElement.evaluate((parent) => {
+    const child = parent.querySelector('#password-strength-meter-label');
+    return child ? child.textContent.trim() : '';
+  });
+
+  expect(passwordStrengthText).toBe('Weak');
 });
+
+
+
 
 test("Repeating a password with a different value", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");

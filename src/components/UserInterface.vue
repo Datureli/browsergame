@@ -4,17 +4,13 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useNickname } from "../composables/useNickname";
-export default {
-  props: {
-    modelValue: String,
-  },
-  setup() {
-     let { nickname } = useNickname()
-    return {
-      nickname
-    };
-  },
-};
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  modelValue: String,
+});
+
+let { nickname } = useNickname();
 </script>

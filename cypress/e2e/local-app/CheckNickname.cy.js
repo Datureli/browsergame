@@ -1,4 +1,4 @@
-import NicknameObjectModel from "./pages/NickaneObjectModel";
+import NicknameObjectModel from "../../pages/NickaneObjectModel";
 import Home from "../src/views/Home.vue";
 
 

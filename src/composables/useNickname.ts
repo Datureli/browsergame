@@ -1,6 +1,6 @@
 import { ref, Ref, onMounted } from "vue";
 
-let nickname: Ref<string > = ref("");
+let nickname: Ref<string> = ref("");
 const error: Ref<string> = ref("");
 
 export function useNickname() {

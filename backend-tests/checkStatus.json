@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Test statusu API",
+        "request": {
+            "method": "GET",
+            "url": "https://jsonplaceholder.typicode.com/"
+        },
+        "response": {
+            "status": 200   
+        }
+    }
+]
