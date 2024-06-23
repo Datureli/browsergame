@@ -1,5 +1,5 @@
 import NicknameObjectModel from "../../pages/NickaneObjectModel";
-import Home from "../src/views/Home.vue";
+import Home from "../../../src/views/Home.vue";
 
 
 describe("Nickname tests", () => {
