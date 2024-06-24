@@ -1,5 +1,5 @@
 describe("Test integration between Home and ChooseCharacer component", () => {
-  it("Check if the nickname is the same as the one entered in the Home component", () => {
+  it("Check nickname visibility - nickname is the same as the one entered in the Home component", () => {
     cy.visit({
       url: "http://localhost:3000/",
       method: "GET",
