@@ -10,7 +10,6 @@ describe("Test integration between Home and ChooseCharacer component", () => {
     cy.get("button").contains("Continue").click();
     cy.url().should("include", "http://localhost:3000/character");
 
-    // Sprawdź, czy nickname jest poprawnie wyświetlany na stronie wyboru postaci
     cy.get('h2').should('contain', `Choose your Character "${typedNickname}"`);
   });
 });
