@@ -1,6 +1,5 @@
-import NicknameObjectModel from "../../pages/NickaneObjectModel";
-import Home from "../../../src/views/Home.vue";
-
+import NicknameObjectModel from '@cypress/pages/NicknameObjectModel';
+import Home from '@/views/Home.vue';
 
 describe("Nickname tests", () => {
   beforeEach(() => {
@@ -13,11 +12,11 @@ describe("Nickname tests", () => {
 
   it("Check if placeholder is not empty", () => {
     NicknameObjectModel.checkIfPlaceholderIsNotEmpty();
-  })
+  });
 
   it("Check if placeholder value is equal to nickname", () => {
     NicknameObjectModel.checkIfPlacerholderHasCorrectName();
-  })
+  });
 
   it("Check if you can pass to character choose with empty spaces or tabs", () => {
     NicknameObjectModel.checkIfEmptySpacesOrTabsNotAllowed();
