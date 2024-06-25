@@ -38,7 +38,7 @@ describe("test user desktop", () => {
     // false - user can send payment with value 0
   })
 
-  it("send quick payment with ,, instad of value", () => {
+  it("send quick payment with instad of value", () => {
     cy.get("#widget_1_transfer_receiver").select(1);
     cy.get("#widget_1_transfer_amount").clear().type(",,,,");
     cy.get("#widget_1_transfer_title").type("Przelew");
