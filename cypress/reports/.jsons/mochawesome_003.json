@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-06-25T21:02:16.695Z",
+    "end": "2024-06-25T21:02:40.181Z",
+    "duration": 23486,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d8e08f7-cadf-4c81-9a17-d64a608ef67e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\websites\\parabank\\register.cy.js",
+      "file": "cypress\\e2e\\websites\\parabank\\register.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4aec99c4-cae0-44ac-8ede-482ce530e7c6",
+          "title": "register new account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create new account",
+              "fullTitle": "register new account create new account",
+              "timedOut": null,
+              "duration": 7422,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const randomUserName = generateRandomUsername();\ncy.get(\"#loginPanel a:contains('Register')\").click();\ncy.get('[name=\"customer.firstName\"]').type(\"Pawel\");\ncy.get('[name=\"customer.lastName\"]').type(\"Niewiadomski\");\ncy.get('[name=\"customer.address.street\"]').type(\"Juniorów 4\");\ncy.get('[name=\"customer.address.city\"]').type(\"Nibylandia\");\ncy.get('[name=\"customer.address.state\"]').type(\"taki jak w reakcie\");\ncy.get('[name=\"customer.address.zipCode\"]').type(\"211\");\ncy.get('[name=\"customer.phoneNumber\"]').type(\"07000881\");\ncy.get('[name=\"customer.ssn\"]').type(\"pypypy\");\ncy.get('[name=\"customer.username\"]').type(randomUserName);\ncy.get('[name=\"customer.password\"]').type(\"Pawel123\");\ncy.get('[name=\"repeatedPassword\"]').type(\"Pawel123\");\ncy.get('input[type=\"submit\"][value=\"Register\"]').click();\ncy.get(\"p\").contains(\"Your account was created successfully. You are now logged in.\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "769a90ad-1659-4aa2-a780-bdb605088917",
+              "parentUUID": "4aec99c4-cae0-44ac-8ede-482ce530e7c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check if i can register user with existed username account",
+              "fullTitle": "register new account Check if i can register user with existed username account",
+              "timedOut": null,
+              "duration": 10286,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#loginPanel a:contains('Register')\").click();\ncy.get('[name=\"customer.firstName\"]').type(\"Pawel\");\ncy.get('[name=\"customer.lastName\"]').type(\"Niewiadomski\");\ncy.get('[name=\"customer.address.street\"]').type(\"Juniorów 4\");\ncy.get('[name=\"customer.address.city\"]').type(\"Nibylandia\");\ncy.get('[name=\"customer.address.state\"]').type(\"taki jak w reakcie\");\ncy.get('[name=\"customer.address.zipCode\"]').type(\"211\");\ncy.get('[name=\"customer.phoneNumber\"]').type(\"07000881\");\ncy.get('[name=\"customer.ssn\"]').type(\"pypypy\");\ncy.get('[name=\"customer.username\"]').type(\"Datureli11\");\ncy.get('[name=\"customer.password\"]').type(\"Pawel123\");\ncy.get('[name=\"repeatedPassword\"]').type(\"Pawel123\");\ncy.get('input[type=\"submit\"][value=\"Register\"]').click();\ncy.get(\".error\").should(\"be.visible\").contains(\"This username already exists.\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.error`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.error`, but never found it.\n    at Context.eval (webpack://browser-game/./cypress/e2e/websites/parabank/register.cy.js:59:7)",
+                "diff": null
+              },
+              "uuid": "194bb1dc-8009-4e01-8791-bc3abe177803",
+              "parentUUID": "4aec99c4-cae0-44ac-8ede-482ce530e7c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check if all field are required",
+              "fullTitle": "register new account Check if all field are required",
+              "timedOut": null,
+              "duration": 1450,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "e737f58f-dea1-49f5-ba0c-728794609daf",
+              "parentUUID": "4aec99c4-cae0-44ac-8ede-482ce530e7c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "769a90ad-1659-4aa2-a780-bdb605088917",
+            "e737f58f-dea1-49f5-ba0c-728794609daf"
+          ],
+          "failures": [
+            "194bb1dc-8009-4e01-8791-bc3abe177803"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19158,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

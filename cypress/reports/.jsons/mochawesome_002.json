@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-06-25T21:01:58.489Z",
+    "end": "2024-06-25T21:02:11.674Z",
+    "duration": 13185,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a088b465-9602-4250-a1c6-3719f52bda31",
+      "title": "",
+      "fullFile": "cypress\\e2e\\websites\\parabank\\openNewAccount.cy.js",
+      "file": "cypress\\e2e\\websites\\parabank\\openNewAccount.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2631839c-59b5-47cd-8f21-f96fe97f6b76",
+          "title": "Opening new bank account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open checking accounts",
+              "fullTitle": "Opening new bank account Open checking accounts",
+              "timedOut": null,
+              "duration": 8525,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#type\").select(\"CHECKING\");\ncy.get('input[type=\"submit\"][value=\"Open New Account\"]').click();\ncy.wait(2000);\ncy.get(\".title\").should(\"be.visible\").then($title => {\n  expect($title.text()).to.include(\"Account Opened!\");\n});\ncy.get(\"p\").should(\"be.visible\").contains(\"Congratulations, your account is now open.\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href=\"/parabank/openaccount.htm\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Opening new bank account`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href=\"/parabank/openaccount.htm\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Opening new bank account`\n    at Context.eval (webpack://browser-game/./cypress/e2e/websites/parabank/openNewAccount.cy.js:8:52)",
+                "diff": null
+              },
+              "uuid": "a1a2abb7-bdd7-416d-8da3-7a3f1815141a",
+              "parentUUID": "2631839c-59b5-47cd-8f21-f96fe97f6b76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a1a2abb7-bdd7-416d-8da3-7a3f1815141a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8525,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

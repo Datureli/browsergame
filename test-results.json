@@ -42,6 +42,7 @@
         "outputDir": "C:/Users/48578/Vue/browsergame/test-results",
         "repeatEach": 1,
         "retries": 0,
+        "metadata": {},
         "id": "chromium",
         "name": "chromium",
         "testDir": "C:/Users/48578/Vue/browsergame/playwright",
@@ -55,6 +56,7 @@
         "outputDir": "C:/Users/48578/Vue/browsergame/test-results",
         "repeatEach": 1,
         "retries": 0,
+        "metadata": {},
         "id": "firefox",
         "name": "firefox",
         "testDir": "C:/Users/48578/Vue/browsergame/playwright",
@@ -68,6 +70,7 @@
         "outputDir": "C:/Users/48578/Vue/browsergame/test-results",
         "repeatEach": 1,
         "retries": 0,
+        "metadata": {},
         "id": "webkit",
         "name": "webkit",
         "testDir": "C:/Users/48578/Vue/browsergame/playwright",
@@ -80,20 +83,20 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.42.1",
+    "version": "1.45.0",
     "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "register.spec.ts",
-      "file": "register.spec.ts",
+      "title": "sauce-demo\\login.spec.ts",
+      "file": "sauce-demo/login.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Sprawdź siłę hasła wyłącznie z małymi literami - słabe",
-          "ok": false,
+          "title": "Check login",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -104,53 +107,29 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 34,
-                  "status": "failed",
-                  "duration": 5855,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Weak\"\u001b[39m\nReceived: \u001b[31m\"No Password\"\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Weak\"\u001b[39m\nReceived: \u001b[31m\"No Password\"\u001b[39m\n    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts:43:32",
-                    "location": {
-                      "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts",
-                      "column": 32,
-                      "line": 43
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 41 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 42 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m   expect(passwordStrengthText)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Weak'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts",
-                        "column": 32,
-                        "line": 43
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Weak\"\u001b[39m\nReceived: \u001b[31m\"No Password\"\u001b[39m\n\n\u001b[0m \u001b[90m 41 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 42 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m   expect(passwordStrengthText)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Weak'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts:43:32\u001b[22m"
-                    }
-                  ],
+                  "workerIndex": 6,
+                  "status": "passed",
+                  "duration": 5137,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-05-14T21:17:40.124Z",
+                  "startTime": "2024-09-11T06:32:17.827Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\register-Sprawdź-siłę-hasła-wyłącznie-z-małymi-literami---słabe-chromium\\trace.zip"
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-login-chromium\\trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\register.spec.ts",
-                    "column": 32,
-                    "line": 43
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "ab6fb19b790d2390d751-fffa919ad12116728675",
-          "file": "register.spec.ts",
-          "line": 16,
+          "id": "46edfd84a8d1beb5e696-1bc41e27c15adff7d559",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 3,
           "column": 5
         }
       ]
@@ -158,11 +137,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-05-14T21:17:38.604Z",
-    "duration": 8209.132000000216,
-    "expected": 0,
+    "startTime": "2024-09-11T06:32:15.597Z",
+    "duration": 8479.877000004053,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

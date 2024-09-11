@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-25T21:03:17.281Z",
+    "end": "2024-06-25T21:03:30.587Z",
+    "duration": 13306,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e496a038-127a-4f2b-85ec-c711aa485e26",
+      "title": "",
+      "fullFile": "cypress\\e2e\\websites\\demo-bank\\dashboard\\reports.cy.js",
+      "file": "cypress\\e2e\\websites\\demo-bank\\dashboard\\reports.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1da7ee64-d8aa-498a-9763-db15c95581a9",
+          "title": "test report section",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check if i can download txt file",
+              "fullTitle": "test report section Check if i can download txt file",
+              "timedOut": null,
+              "duration": 3380,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "downloadFileTest(\"#btn_dl_txt\", \"txt\");",
+              "err": {},
+              "uuid": "8a977791-63ef-478f-97aa-14f878289932",
+              "parentUUID": "1da7ee64-d8aa-498a-9763-db15c95581a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check if i can download zip file",
+              "fullTitle": "test report section Check if i can download zip file",
+              "timedOut": null,
+              "duration": 1266,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "downloadFileTest(\"#btn_dl_zip\", \"zip\");",
+              "err": {},
+              "uuid": "d21f8fa7-8c0f-4dfb-9231-df0401f9e309",
+              "parentUUID": "1da7ee64-d8aa-498a-9763-db15c95581a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check if i can send a txt file to browser",
+              "fullTitle": "test report section Check if i can send a txt file to browser",
+              "timedOut": null,
+              "duration": 1487,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(iframe).within(() => {\n  cy.get(\"#my_file_1\").click({\n    force: true\n  }).attachFile(\"test.txt\");\n  cy.get(\"span.filename\").should(\"contain.text\", \"test.txt\");\n});",
+              "err": {},
+              "uuid": "6aef952f-2964-4577-807d-aa9bf0365d20",
+              "parentUUID": "1da7ee64-d8aa-498a-9763-db15c95581a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check if i can send a json file to browser",
+              "fullTitle": "test report section Check if i can send a json file to browser",
+              "timedOut": null,
+              "duration": 996,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(iframe).within(() => {\n  cy.get(\"#my_file_2\").click({\n    force: true\n  }).attachFile(\"example.json\");\n  cy.get(\"span.filename\").should(\"contain.text\", \"example.json\");\n});",
+              "err": {},
+              "uuid": "963ee74b-a312-4d0e-9fd7-f36375db569c",
+              "parentUUID": "1da7ee64-d8aa-498a-9763-db15c95581a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check summary report",
+              "fullTitle": "test report section check summary report",
+              "timedOut": null,
+              "duration": 1031,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(iframe).within(() => {\n  cy.get(\"#get_table_report_btn\").click();\n  cy.get(\"#table\").should(\"be.visible\");\n});",
+              "err": {},
+              "uuid": "742a3478-decc-46d9-82f1-2d1589a72a20",
+              "parentUUID": "1da7ee64-d8aa-498a-9763-db15c95581a9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8a977791-63ef-478f-97aa-14f878289932",
+            "d21f8fa7-8c0f-4dfb-9231-df0401f9e309",
+            "6aef952f-2964-4577-807d-aa9bf0365d20",
+            "963ee74b-a312-4d0e-9fd7-f36375db569c",
+            "742a3478-decc-46d9-82f1-2d1589a72a20"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8160,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
