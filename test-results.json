@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -95,7 +95,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Check login",
+          "title": "Check if the correct login redirects the user to the dashboard",
           "ok": true,
           "tags": [],
           "tests": [
@@ -107,19 +107,19 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 9,
                   "status": "passed",
-                  "duration": 5137,
+                  "duration": 6468,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-11T06:32:17.827Z",
+                  "startTime": "2024-09-11T08:07:03.446Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-login-chromium\\trace.zip"
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-if--bfe5a-s-the-user-to-the-dashboard-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -127,9 +127,85 @@
               "status": "expected"
             }
           ],
-          "id": "46edfd84a8d1beb5e696-1bc41e27c15adff7d559",
+          "id": "46edfd84a8d1beb5e696-d8202e89af6ca24841d2",
           "file": "sauce-demo/login.spec.ts",
           "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Check login with incorrect credential",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "status": "passed",
+                  "duration": 5768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-11T08:07:03.599Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-login-with-incorrect-credential-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-12d3e2877d38c3fd6c6b",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 13,
+          "column": 5
+        },
+        {
+          "title": "test wygaśniecia sesji",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "status": "passed",
+                  "duration": 996,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-11T08:07:03.482Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-test-wygaśniecia-sesji-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-1ede343a7b6c575f47a6",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 23,
           "column": 5
         }
       ]
@@ -137,9 +213,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-11T06:32:15.597Z",
-    "duration": 8479.877000004053,
-    "expected": 1,
+    "startTime": "2024-09-11T08:07:01.010Z",
+    "duration": 9954.240000002086,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
