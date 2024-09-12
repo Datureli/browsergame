@@ -95,8 +95,8 @@
       "line": 0,
       "specs": [
         {
-          "title": "Attempt to log in with an empty password field",
-          "ok": true,
+          "title": "Attempt to log in with a problem user's account",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -107,29 +107,53 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "status": "passed",
-                  "duration": 1483,
-                  "errors": [],
+                  "workerIndex": 10,
+                  "status": "failed",
+                  "duration": 4557,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"/static/media/s\u001b[7mauce-pullover-1200x1500.51d7ffaf\u001b[27m.jpg\"\u001b[39m\nReceived: \u001b[31m\"/static/media/s\u001b[7ml-404.168b1cce\u001b[27m.jpg\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"/static/media/s\u001b[7mauce-pullover-1200x1500.51d7ffaf\u001b[27m.jpg\"\u001b[39m\nReceived: \u001b[31m\"/static/media/s\u001b[7ml-404.168b1cce\u001b[27m.jpg\"\u001b[39m\n    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts:83:24",
+                    "location": {
+                      "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts",
+                      "column": 24,
+                      "line": 83
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 81 |\u001b[39m\n \u001b[90m 82 |\u001b[39m   \u001b[90m// Sprawdź, czy oba obrazki są takie same\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 83 |\u001b[39m   expect(thumbnailSrc)\u001b[33m.\u001b[39mtoBe(detailsSrc)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 84 |\u001b[39m })\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts",
+                        "column": 24,
+                        "line": 83
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"/static/media/s\u001b[7mauce-pullover-1200x1500.51d7ffaf\u001b[27m.jpg\"\u001b[39m\nReceived: \u001b[31m\"/static/media/s\u001b[7ml-404.168b1cce\u001b[27m.jpg\"\u001b[39m\n\n\u001b[0m \u001b[90m 81 |\u001b[39m\n \u001b[90m 82 |\u001b[39m   \u001b[90m// Sprawdź, czy oba obrazki są takie same\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 83 |\u001b[39m   expect(thumbnailSrc)\u001b[33m.\u001b[39mtoBe(detailsSrc)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 84 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts:83:24\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-12T08:49:14.113Z",
+                  "startTime": "2024-09-12T09:45:30.506Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Attempt-t-83271-ith-an-empty-password-field-chromium\\trace.zip"
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Attempt-t-d35e7-th-a-problem-user-s-account-chromium\\trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts",
+                    "column": 24,
+                    "line": 83
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "46edfd84a8d1beb5e696-9761c35a64dbddb0ab3d",
+          "id": "46edfd84a8d1beb5e696-cd33af6000fd34e1c2a1",
           "file": "sauce-demo/login.spec.ts",
-          "line": 51,
+          "line": 67,
           "column": 5
         }
       ]
@@ -137,11 +161,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-12T08:49:12.298Z",
-    "duration": 3734.0749999999534,
-    "expected": 1,
+    "startTime": "2024-09-12T09:45:28.621Z",
+    "duration": 7005.435999999754,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
