@@ -42,4 +42,8 @@ test("Attempt to log in with empty fields", async ({ page }) => {
 test("Attempt to log in with an empty user field", async ({ page }) => {
   await page.locator('[data-test="password"]').fill("dsdsa");
   await page.locator('[data-test="login-button"]').click();
+
+  await expect(page.locator('[data-test="error"]')).toHaveText(
+    "Epic sadface: Username is required"
+  );
 });

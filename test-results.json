@@ -95,7 +95,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Test pustych pól logowania",
+          "title": "Check login with incorrect credential",
           "ok": true,
           "tags": [],
           "tests": [
@@ -107,19 +107,19 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 6,
                   "status": "passed",
-                  "duration": 4277,
+                  "duration": 4600,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-12T08:28:57.972Z",
+                  "startTime": "2024-09-12T08:44:35.174Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Test-pustych-pól-logowania-chromium\\trace.zip"
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-login-with-incorrect-credential-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -127,9 +127,9 @@
               "status": "expected"
             }
           ],
-          "id": "46edfd84a8d1beb5e696-b636a69c70f9e37fe5df",
+          "id": "46edfd84a8d1beb5e696-12d3e2877d38c3fd6c6b",
           "file": "sauce-demo/login.spec.ts",
-          "line": 34,
+          "line": 18,
           "column": 5
         }
       ]
@@ -137,8 +137,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-12T08:28:55.711Z",
-    "duration": 7103.146999999997,
+    "startTime": "2024-09-12T08:44:33.211Z",
+    "duration": 7148.925999999978,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
