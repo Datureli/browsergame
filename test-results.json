@@ -95,7 +95,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Check login with incorrect credential",
+          "title": "Attempt to log in with an empty password field",
           "ok": true,
           "tags": [],
           "tests": [
@@ -107,19 +107,19 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 8,
                   "status": "passed",
-                  "duration": 4600,
+                  "duration": 1483,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-12T08:44:35.174Z",
+                  "startTime": "2024-09-12T08:49:14.113Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-login-with-incorrect-credential-chromium\\trace.zip"
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Attempt-t-83271-ith-an-empty-password-field-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -127,9 +127,9 @@
               "status": "expected"
             }
           ],
-          "id": "46edfd84a8d1beb5e696-12d3e2877d38c3fd6c6b",
+          "id": "46edfd84a8d1beb5e696-9761c35a64dbddb0ab3d",
           "file": "sauce-demo/login.spec.ts",
-          "line": 18,
+          "line": 51,
           "column": 5
         }
       ]
@@ -137,8 +137,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-12T08:44:33.211Z",
-    "duration": 7148.925999999978,
+    "startTime": "2024-09-12T08:49:12.298Z",
+    "duration": 3734.0749999999534,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

@@ -47,3 +47,10 @@ test("Attempt to log in with an empty user field", async ({ page }) => {
     "Epic sadface: Username is required"
   );
 });
+
+test("Attempt to log in with an empty password field", async ({ page}) => {
+  await page.locator('[data-test="username"]').fill("standard_user");
+  await page.locator('[data-test="login-button"]').click();
+
+  await expect(page.locator('[data-test="error"]')).toHaveText("Epic sadface: Password is required")
+})
