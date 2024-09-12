@@ -5,7 +5,9 @@ test.beforeEach(async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
 });
 
-test("Check if the correct login redirects the user to the dashboard", async ({ page }) => {
+test("Check if the correct login redirects the user to the dashboard", async ({
+  page,
+}) => {
   await page.locator('[data-test="username"]').fill("standard_user");
   await page.locator('[data-test="password"]').fill("secret_sauce");
   await page.locator('[data-test="login-button"]').click();
@@ -29,6 +31,12 @@ test("Check login function with correct credential", async ({ page }) => {
   await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
 });
 
-test("Test wygaśnięcia sesji", async ({ page }) => {
- 
+test("Attempt to log in with empty fields", async ({ page }) => {
+  await page.locator('[data-test="username"]').fill("");
+  await page.locator('[data-test="password"]').fill("");
+  await page.locator('[data-test="login-button"]').click();
+
+  await expect(page.locator('[data-test="error"]')).toHaveText(
+    "Epic sadface: Username is required"
+  );
 });
