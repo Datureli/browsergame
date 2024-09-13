@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -95,6 +95,296 @@
       "line": 0,
       "specs": [
         {
+          "title": "Check if the correct login redirects the user to the dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 36,
+                  "status": "passed",
+                  "duration": 4668,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-12T20:12:37.634Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-if--bfe5a-s-the-user-to-the-dashboard-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-d8202e89af6ca24841d2",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "Check login with incorrect credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 37,
+                  "status": "passed",
+                  "duration": 4178,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-12T20:12:37.681Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-login-with-incorrect-credentials-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-bf9cb3810ede6631ef5a",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with empty fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 38,
+                  "status": "passed",
+                  "duration": 3988,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-12T20:12:37.787Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Attempt-to-log-in-with-empty-fields-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-2b2954c8ce44d9c5c0ac",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 22,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty user field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 39,
+                  "status": "passed",
+                  "duration": 4167,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-12T20:12:37.723Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Attempt-to-log-in-with-an-empty-user-field-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-f4c2f0ede4cfae6e1c3c",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 31,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty password field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 39,
+                  "status": "passed",
+                  "duration": 3198,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-12T20:12:42.717Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Attempt-t-83271-ith-an-empty-password-field-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-9761c35a64dbddb0ab3d",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with a blocked user account",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 38,
+                  "status": "passed",
+                  "duration": 2973,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-12T20:12:42.964Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Attempt-t-5dc0e-with-a-blocked-user-account-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-9f6744a27a7b7fd28349",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "Check if logging in with the problematic user still shows the changed thumbnail",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 37,
+                  "status": "failed",
+                  "duration": 2911,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"/static/media/s\u001b[7mauce-pullover-1200x1500.51d7ffaf\u001b[27m.jpg\"\u001b[39m\nReceived: \u001b[31m\"/static/media/s\u001b[7ml-404.168b1cce\u001b[27m.jpg\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"/static/media/s\u001b[7mauce-pullover-1200x1500.51d7ffaf\u001b[27m.jpg\"\u001b[39m\nReceived: \u001b[31m\"/static/media/s\u001b[7ml-404.168b1cce\u001b[27m.jpg\"\u001b[39m\n    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts:69:24",
+                    "location": {
+                      "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts",
+                      "column": 24,
+                      "line": 69
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 67 |\u001b[39m   \u001b[36mconst\u001b[39m detailsSrc \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mgetDetailsSrc()\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 |\u001b[39m   expect(thumbnailSrc)\u001b[33m.\u001b[39mtoBe(detailsSrc)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\n \u001b[90m 72 |\u001b[39m test(\u001b[32m\"Check whether the dashboard is displayed correctly for a user with a slow Internet connection\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts",
+                        "column": 24,
+                        "line": 69
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"/static/media/s\u001b[7mauce-pullover-1200x1500.51d7ffaf\u001b[27m.jpg\"\u001b[39m\nReceived: \u001b[31m\"/static/media/s\u001b[7ml-404.168b1cce\u001b[27m.jpg\"\u001b[39m\n\n\u001b[0m \u001b[90m 67 |\u001b[39m   \u001b[36mconst\u001b[39m detailsSrc \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mgetDetailsSrc()\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 |\u001b[39m   expect(thumbnailSrc)\u001b[33m.\u001b[39mtoBe(detailsSrc)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\n \u001b[90m 72 |\u001b[39m test(\u001b[32m\"Check whether the dashboard is displayed correctly for a user with a slow Internet connection\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n\u001b[2m    at C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts:69:24\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-09-12T20:12:43.049Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-login-Check-if--97c3c-shows-the-changed-thumbnail-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\48578\\Vue\\browsergame\\playwright\\sauce-demo\\login.spec.ts",
+                    "column": 24,
+                    "line": 69
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-1b466ce1257688bfb403",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
           "title": "Check whether the dashboard is displayed correctly for a user with a slow Internet connection",
           "ok": true,
           "tags": [],
@@ -107,14 +397,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 16,
+                  "workerIndex": 36,
                   "status": "passed",
-                  "duration": 9670,
+                  "duration": 7265,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-12T16:09:35.620Z",
+                  "startTime": "2024-09-12T20:12:43.540Z",
                   "attachments": [
                     {
                       "name": "trace",
@@ -129,7 +419,7 @@
           ],
           "id": "46edfd84a8d1beb5e696-47eb6c821401cae0c817",
           "file": "sauce-demo/login.spec.ts",
-          "line": 93,
+          "line": 72,
           "column": 5
         }
       ]
@@ -137,11 +427,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-12T16:09:33.317Z",
-    "duration": 12649.100999999791,
-    "expected": 1,
+    "startTime": "2024-09-12T20:12:33.952Z",
+    "duration": 17185.61900000274,
+    "expected": 7,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
