@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -95,7 +95,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Add product to cart",
+          "title": "Check if it is the same item",
           "ok": true,
           "tags": [],
           "tests": [
@@ -107,19 +107,19 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 18,
                   "status": "passed",
-                  "duration": 9741,
+                  "duration": 6614,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-14T15:49:51.992Z",
+                  "startTime": "2024-09-14T17:13:08.372Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-Cart-Add-product-to-cart-chromium\\trace.zip"
+                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-Cart-Check-if-it-is-the-same-item-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -127,85 +127,9 @@
               "status": "expected"
             }
           ],
-          "id": "d1e9d79d24796ccaf7c6-c37f3459f832d359f388",
+          "id": "d1e9d79d24796ccaf7c6-1b6c7768f77a008e244a",
           "file": "sauce-demo/Cart.spec.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "Remove product from cart",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 8,
-                  "status": "passed",
-                  "duration": 9911,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-09-14T15:49:51.991Z",
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-Cart-Remove-product-from-cart-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "d1e9d79d24796ccaf7c6-b1b27e3e6acc9c6cc914",
-          "file": "sauce-demo/Cart.spec.ts",
-          "line": 17,
-          "column": 5
-        },
-        {
-          "title": "Add two or more items to cart",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 10224,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-09-14T15:49:51.994Z",
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-Cart-Add-two-or-more-items-to-cart-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "d1e9d79d24796ccaf7c6-c46188369a2cf77f9250",
-          "file": "sauce-demo/Cart.spec.ts",
-          "line": 30,
+          "line": 43,
           "column": 5
         }
       ]
@@ -213,9 +137,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-14T15:49:45.825Z",
-    "duration": 19290.82899999991,
-    "expected": 3,
+    "startTime": "2024-09-14T17:13:05.613Z",
+    "duration": 10720.822999998927,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
