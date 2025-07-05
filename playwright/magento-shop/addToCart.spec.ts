@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-// ✅ Wspólna logika przed każdym testem – akceptacja cookies jeśli się pojawi
+// ✅ akceptacja cookies jeśli się pojawi
 test.beforeEach(async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
 
