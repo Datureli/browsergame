@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -89,13 +89,13 @@
   },
   "suites": [
     {
-      "title": "sauce-demo\\Cart.spec.ts",
-      "file": "sauce-demo/Cart.spec.ts",
+      "title": "magento-shop\\addToCart.spec.ts",
+      "file": "magento-shop/addToCart.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Check if it is the same item",
+          "title": "Check if cart quantity changing after add item to cart",
           "ok": true,
           "tags": [],
           "tests": [
@@ -107,29 +107,1571 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 18,
-                  "status": "passed",
-                  "duration": 6614,
+                  "workerIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-14T17:13:08.372Z",
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\48578\\Vue\\browsergame\\test-results\\sauce-demo-Cart-Check-if-it-is-the-same-item-chromium\\trace.zip"
-                    }
-                  ]
+                  "startTime": "2025-07-05T11:36:34.172Z",
+                  "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
-          "id": "d1e9d79d24796ccaf7c6-1b6c7768f77a008e244a",
+          "id": "9547186db0fedcd16543-071cff67d2e26b7b55e5",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Check if the item has been added to the cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-05T11:36:34.180Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-c2345cfb238c32a4cc16",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "check if the cart icon opens a modal window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-05T11:36:34.184Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-6f25adaa8fcc2d7a4e59",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "Check if there is information that the basket is empty",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-05T11:36:34.211Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-7e9bdf83ad00bd2f4825",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 59,
+          "column": 5
+        },
+        {
+          "title": "check if the active class is added to it after opening the basket icon",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-819b3b7df02175126fbc",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 70,
+          "column": 5
+        },
+        {
+          "title": "Check if cart quantity changing after add item to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-f63155c183b36b2a0e73",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Check if the item has been added to the cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-9d490656ba1c6972c576",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "check if the cart icon opens a modal window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-d3a60b81fb44988a3dee",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "Check if there is information that the basket is empty",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-bad32b1027f212fe43c7",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 59,
+          "column": 5
+        },
+        {
+          "title": "check if the active class is added to it after opening the basket icon",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-7f3f0b7488c8e5c682ce",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 70,
+          "column": 5
+        },
+        {
+          "title": "Check if cart quantity changing after add item to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-2f083cd0a130bcf9897a",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Check if the item has been added to the cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-ec3dfc2608def86bb9ea",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "check if the cart icon opens a modal window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-37148eaef97f448f97a5",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "Check if there is information that the basket is empty",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-d1e45390b143505fbec4",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 59,
+          "column": 5
+        },
+        {
+          "title": "check if the active class is added to it after opening the basket icon",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9547186db0fedcd16543-edfc386fea336e87aae8",
+          "file": "magento-shop/addToCart.spec.ts",
+          "line": 70,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "magento-shop\\register.spec.ts",
+      "file": "magento-shop/register.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "check register user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-fa72b07efd5382ab72cb",
+          "file": "magento-shop/register.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Sprawdź siłę hasła wyłącznie z małymi literami - słabe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-5a426906d2b217d2f679",
+          "file": "magento-shop/register.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "Repeating a password with a different value",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-64146b1456e238564dbf",
+          "file": "magento-shop/register.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "Password below 8 characters did not pass",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-e02fe76b3c6575727c15",
+          "file": "magento-shop/register.spec.ts",
+          "line": 62,
+          "column": 5
+        },
+        {
+          "title": "test email field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-dee79626ab404479c21c",
+          "file": "magento-shop/register.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "Try create account with existing email ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-0b21df843fbb59eaabda",
+          "file": "magento-shop/register.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "check register user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-506665cc868b75912260",
+          "file": "magento-shop/register.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Sprawdź siłę hasła wyłącznie z małymi literami - słabe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-cc14cfb91b195798dbe4",
+          "file": "magento-shop/register.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "Repeating a password with a different value",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-b9a5d1ccdf5b67851646",
+          "file": "magento-shop/register.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "Password below 8 characters did not pass",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-7f4b75d018bf493f789f",
+          "file": "magento-shop/register.spec.ts",
+          "line": 62,
+          "column": 5
+        },
+        {
+          "title": "test email field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-5db2b4fcc0dfdc8d7942",
+          "file": "magento-shop/register.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "Try create account with existing email ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-38d28da9f0e9e3481b66",
+          "file": "magento-shop/register.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "check register user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-fa4d767a7b5d574afee4",
+          "file": "magento-shop/register.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Sprawdź siłę hasła wyłącznie z małymi literami - słabe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-9839bb52998003a4fada",
+          "file": "magento-shop/register.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "Repeating a password with a different value",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-2e4ad74562312edd2282",
+          "file": "magento-shop/register.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "Password below 8 characters did not pass",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-3fec5b51375d5603ce0f",
+          "file": "magento-shop/register.spec.ts",
+          "line": 62,
+          "column": 5
+        },
+        {
+          "title": "test email field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-decc89cdde71fb9ebe16",
+          "file": "magento-shop/register.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "Try create account with existing email ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ddeaafa4d967fd1b63d5-5eb4cf0b833a67d23442",
+          "file": "magento-shop/register.spec.ts",
+          "line": 86,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "magento-shop\\search.spec.ts",
+      "file": "magento-shop/search.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Check if the word search result appears with the selected word",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "dbbdb51ad2d63019630a-211683cd5e76b2ceca9a",
+          "file": "magento-shop/search.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Check if there is a message stating that the search phrase must have at least 3 letters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "dbbdb51ad2d63019630a-676b4e42651ba7569390",
+          "file": "magento-shop/search.spec.ts",
+          "line": 18,
+          "column": 5
+        },
+        {
+          "title": "Check if the word search result appears with the selected word",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "dbbdb51ad2d63019630a-8228a70fb4b95e598ca0",
+          "file": "magento-shop/search.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Check if there is a message stating that the search phrase must have at least 3 letters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "dbbdb51ad2d63019630a-d0651b7a1bba3ce22daf",
+          "file": "magento-shop/search.spec.ts",
+          "line": 18,
+          "column": 5
+        },
+        {
+          "title": "Check if the word search result appears with the selected word",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "dbbdb51ad2d63019630a-feaf11429a63fa8b1dd8",
+          "file": "magento-shop/search.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Check if there is a message stating that the search phrase must have at least 3 letters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "dbbdb51ad2d63019630a-4fca73a5a4aa5a6940a9",
+          "file": "magento-shop/search.spec.ts",
+          "line": 18,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "sauce-demo\\Cart.spec.ts",
+      "file": "sauce-demo/Cart.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Add product to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-c37f3459f832d359f388",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "Remove product from cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-b1b27e3e6acc9c6cc914",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "Add two or more items to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-c46188369a2cf77f9250",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "Whether the item added in the store is the same in the basket",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-27d8ed62250aac8ab648",
           "file": "sauce-demo/Cart.spec.ts",
           "line": 43,
+          "column": 5
+        },
+        {
+          "title": "Add product to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-998b176c960f6796b2f9",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "Remove product from cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-2993ea8ce503df9ba854",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "Add two or more items to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-f3a48804a19ecdb3e30c",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "Whether the item added in the store is the same in the basket",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-6b362ab1118b586ee984",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 43,
+          "column": 5
+        },
+        {
+          "title": "Add product to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-6cb8c169c69544d4b48a",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "Remove product from cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-a41abdf31b99d4404b24",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "Add two or more items to cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-62b439bd6fc28f1fee49",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "Whether the item added in the store is the same in the basket",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d1e9d79d24796ccaf7c6-84632e3e10e563668ca1",
+          "file": "sauce-demo/Cart.spec.ts",
+          "line": 43,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "sauce-demo\\login.spec.ts",
+      "file": "sauce-demo/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Check if the correct login redirects the user to the dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-d8202e89af6ca24841d2",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "Check login with incorrect credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-bf9cb3810ede6631ef5a",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with empty fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-2b2954c8ce44d9c5c0ac",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 22,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty user field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-f4c2f0ede4cfae6e1c3c",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 31,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty password field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-9761c35a64dbddb0ab3d",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with a blocked user account",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-9f6744a27a7b7fd28349",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "Check if logging in with the problematic user still shows the changed thumbnail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-1b466ce1257688bfb403",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "Check whether the dashboard is displayed correctly for a user with a slow Internet connection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-47eb6c821401cae0c817",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 72,
+          "column": 5
+        },
+        {
+          "title": "Check if the correct login redirects the user to the dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-46bc0fcd4c16d14b0e9e",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "Check login with incorrect credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-a18ad1d763e2cdb0b320",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with empty fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-cbebe4afdd0dd7341626",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 22,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty user field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-9480cf330682a61ede99",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 31,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty password field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-facd63dc8f20b8121a8a",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with a blocked user account",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-24f95cda416d438ced4c",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "Check if logging in with the problematic user still shows the changed thumbnail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-8ba09432129bcf4146ea",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "Check whether the dashboard is displayed correctly for a user with a slow Internet connection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-542fed51df3038923128",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 72,
+          "column": 5
+        },
+        {
+          "title": "Check if the correct login redirects the user to the dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-e897481e587d75baf180",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "Check login with incorrect credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-a9f5b46ab1d5463a385b",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with empty fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-9fd5eea01f329679a344",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 22,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty user field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-2df26aec5d7ab7940a12",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 31,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with an empty password field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-403ffae142399db638e0",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "Attempt to log in with a blocked user account",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-7cc253b01e027b998df9",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "Check if logging in with the problematic user still shows the changed thumbnail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-e6362236141c618e155a",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "Check whether the dashboard is displayed correctly for a user with a slow Internet connection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46edfd84a8d1beb5e696-044f67639e42c015154c",
+          "file": "sauce-demo/login.spec.ts",
+          "line": 72,
           "column": 5
         }
       ]
@@ -137,10 +1679,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-14T17:13:05.613Z",
-    "duration": 10720.822999998927,
-    "expected": 1,
-    "skipped": 0,
+    "startTime": "2025-07-05T11:36:32.513Z",
+    "duration": 1727.223,
+    "expected": 0,
+    "skipped": 75,
     "unexpected": 0,
     "flaky": 0
   }
